@@ -34,7 +34,7 @@ module.exports = {
 					'utils/_system.scss',
 					'utils/mixins/**/*.scss',
 					'utils/extends/**/*.scss',
-					'global/_base.scss'
+					'global/_font-base.scss'
 				]
 			}
 		]
