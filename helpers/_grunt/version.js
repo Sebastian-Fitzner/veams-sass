@@ -8,6 +8,7 @@ module.exports = {
 		},
 		src: [
 			'package.json',
+			'bower.json',
 			'README.md',
 			'<%= paths.src %>/templates/partials/blocks/b-version.hbs'
 		]
@@ -18,6 +19,7 @@ module.exports = {
 		},
 		src: [
 			'package.json',
+			'bower.json',
 			'README.md',
 			'<%= paths.src %>/templates/partials/blocks/b-version.hbs'
 		]
@@ -28,6 +30,7 @@ module.exports = {
 		},
 		src: [
 			'package.json',
+			'bower.json',
 			'README.md',
 			'<%= paths.src %>/templates/partials/blocks/b-version.hbs'
 		]
