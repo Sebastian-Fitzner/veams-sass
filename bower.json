@@ -1,10 +1,10 @@
 {
 	"name": "pg-scss",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"ignore": [
 		"_dist",
 		"_output",
-		"_helpers",
+		"helpers",
 		"resources/assets",
 		"resources/data",
 		"resources/js",
@@ -12,7 +12,7 @@
 		".bowerrc",
 		".gitignore",
 		"bower.json",
-		"gruntfile.js",
+		"Gruntfile.js",
 		"package.json",
 		"README.md"
 	],
