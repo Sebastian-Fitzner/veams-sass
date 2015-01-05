@@ -1,7 +1,7 @@
-(function () {
+(function() {
 	var el = document.getElementById('toggle');
 
-	el.addEventListener("click", function (e) {
+	el.addEventListener("click", function(e) {
 		var wrapper = document.getElementById('site-wrapper');
 
 		e.preventDefault();
