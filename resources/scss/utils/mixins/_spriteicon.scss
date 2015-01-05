@@ -1,0 +1,13 @@
+/* ===================================================
+SPRITEICON MIXIN
+
+	- usage: @include spriteicon(filename);
+=================================================== */
+
+@mixin sprite($name) {
+	@extend %sprites-#{$name}-medium;
+
+	.no-svg & {
+		@extend %no-svg-sprites-#{$name}-medium;
+	}
+}

@@ -1,0 +1,12 @@
+$mobile-first: false; // This variable will be use in utils/mixins/_breakpoint.scss
+
+$max-width: 1138px;
+
+// Define your breakpoints
+$tablet: 768px;
+$mobile: 480px;
+
+// Demo Vars
+$color-validate-error: #e70000;
+$color-logo: #272727;
+$font-family: 'Helvetica', 'Arial', sans-serif;  

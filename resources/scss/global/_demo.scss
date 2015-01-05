@@ -1,0 +1,42 @@
+/* ---------------------------------------------------
+Demo Styles
+--------------------------------------------------- */
+ body {
+ 	color: #333;
+ 	background: #eee;
+ }
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: $font-family;
+}
+
+p,
+ul,
+li {
+	font-family: $font-family;
+	font-weight: normal;
+	line-height: 2.2rem;
+
+	margin-bottom: 1rem;
+
+	@include rem("font-size", 17px);
+}
+
+#site-wrapper {
+	height: 100%;
+}
+
+.container {
+	padding: 0 1em;
+	width: $max-width;
+	margin: 0 auto;
+
+}
+
+.canvas {
+	border-top: 1px solid #fff;
+}
+

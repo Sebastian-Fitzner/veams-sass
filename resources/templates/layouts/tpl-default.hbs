@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+{{> b-version }}
+
+<html lang="en" class="no-js"> <!--<![endif]-->
+
+<head>
+	
+	{{#block "metadata"}}
+		{{> _metadata }}
+	{{/block}}
+	{{#block "styles"}}
+		{{> _styles }}
+	{{/block}}
+	
+</head>
+
+<body class="{{ bodyclass }}">
+	
+
+	<div id="site-wrapper">
+		<div class="canvas" id="site-canvas">
+
+			<!-- Header
+			================================================== -->
+			<header class="r-header">
+				<div class="container header__container">
+					{{partial "b-toggle" }}
+					{{partial "b-logo" }}
+				</div>
+			</header>
+
+			
+			<section class="r-nav">
+				{{#block "nav"}}
+					<!-- Navbar
+					================================================== -->
+					{{> b-nav }}
+				{{/block}}
+			</section>
+				
+
+			<!-- Stage
+			================================================== -->
+			<section class="r-stage">
+				<div class="container stage__container">
+					{{> b-stage-content }}
+				</div>
+			</section>
+
+			<!-- Content
+			================================================== -->
+			<main class="r-main" id="main">
+				<div class="container main__container">
+					<aside class="r-sidebar is-right">
+						
+						{{#block "sidebar-right"}}
+							{{> b-release }}
+						{{/block}}
+						
+					</aside>
+					<div class="r-content">
+						
+						{{#block "body"}}
+							{{> body }}
+						{{/block}}
+						
+					</div>
+
+				</div>
+			</main>
+
+			<!-- Footer
+			================================================== -->
+			<footer class="r-footer">
+				<div class="container footer__container">
+					
+					{{#block "footer"}}
+						{{> b-footer-copy }}
+					{{/block}}
+					
+				</div>
+			</footer>
+
+		</div>
+	</div>
+	<!-- Scripts
+	================================================== --> 
+	{{#block "scripts"}}
+		{{> _scripts }}
+	{{/block}}
+	
+</body>
+</html>

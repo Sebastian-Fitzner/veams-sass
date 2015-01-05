@@ -1,0 +1,13 @@
+/* ===================================================
+LAYOUT EXTENDS
+=================================================== */
+
+%float {
+	@include float;
+}
+
+%pseudo {
+	content: '';
+	display: block;
+	position: absolute;
+}
