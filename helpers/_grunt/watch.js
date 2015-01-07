@@ -42,13 +42,13 @@ module.exports = {
 			'<%= paths.src %>/scss/**/*.scss',
 			'!<%= paths.src %>/scss/_all.scss'
 		],
-		tasks: 'fileindex:libsassGlobbing'
+		tasks: 'fileindex'
 	},
 	fileindex: {
 		files: [
 			'<%= paths.helper %>/_grunt/fileindex.js'
 		],
-		tasks: 'fileindex:libsassGlobbing'
+		tasks: 'fileindex'
 	},
 	scss: {
 		files: '<%= paths.src %>/scss/**/*',

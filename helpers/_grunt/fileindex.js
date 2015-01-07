@@ -21,6 +21,22 @@ module.exports = {
 		}
 	},
 
+	pgGlobal: {
+		files: [
+			{
+				// define your destination file
+				dest: '<%= paths.src %>/scss/_pg-global.scss',
+				// define your current working directory in which the sass files are located
+				cwd: '<%= paths.src %>/scss/',
+				// here you can build your _all.scss like you would do in _all.scss with sass-globbing
+				src: [
+					'global/_reset.scss',
+					'global/_print.scss',
+					'global/_font-base.scss'
+				]
+			}
+		]
+	},
 	pg: {
 		files: [
 			{
@@ -30,11 +46,9 @@ module.exports = {
 				cwd: '<%= paths.src %>/scss/',
 				// here you can build your _all.scss like you would do in _all.scss with sass-globbing
 				src: [
-					'global/_reset.scss',
 					'utils/_system.scss',
 					'utils/mixins/**/*.scss',
 					'utils/extends/**/*.scss',
-					'global/_font-base.scss'
 				]
 			}
 		]
@@ -43,19 +57,20 @@ module.exports = {
 		files: [
 			{
 				// define your destination file
-				dest: '<%= paths.src %>/scss/styles.scss',
+				dest: '<%= paths.src %>/scss/demo.scss',
 				// define your current working directory in which the sass files are located
 				cwd: '<%= paths.src %>/scss/',
 				// here you can build your _all.scss like you would do in _all.scss with sass-globbing
 				src: [
-					'global/_vars.scss',
+					'demo/global/_vars.scss',
+					'_pg-global.scss',
 					'_pg.scss',
-					'global/_demo.scss',
-					'icons/**/*.scss',
-					'regions/**/*.scss',
+					'demo/global/_demo.scss',
+					'demo/icons/**/*.scss',
+					'demo/regions/**/*.scss',
 					'modules/**/*.scss',
 					'components/**/*.scss',
-					'blocks/**/*.scss'
+					'demo/blocks/**/*.scss'
 				]
 			}
 		]
