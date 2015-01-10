@@ -5,7 +5,7 @@ module.exports = {
 	},
 	dist: {
 		files: {
-			'<%= paths.dev %>/css/styles.css': '<%= paths.src %>/scss/styles.scss'
+			'<%= paths.dev %>/css/demo.css': '<%= paths.src %>/scss/demo.scss'
 		}
 	}
 };

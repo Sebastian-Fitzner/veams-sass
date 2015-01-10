@@ -1,0 +1,50 @@
+/* ---------------------------------------------------
+Arrow
+--------------------------------------------------- */
+
+@mixin fx-arrow($color: #fff, $height: 60px, $direction: right, $showArrow: true, $transition: all 300ms ease) {
+	position: relative;
+
+	&:after {
+		@if $showArrow == true {
+			@extend %pseudo;
+
+			@if $transition != null {
+				@include prefix(transition, $transition);
+			}
+
+			@if $direction == right {
+				top: 50%;
+				margin-top: -$height/2;
+				right: -$height/2;
+				border-top: $height/2 solid transparent;
+				border-left: $height/2 solid $color;
+				border-bottom: $height/2 solid transparent;
+			} @else if $direction == left {
+				top: 50%;
+				margin-top: -$height/2;
+				left: -$height/2;
+				border-top: $height/2 solid transparent;
+				border-right: $height/2 solid $color;
+				border-bottom: $height/2 solid transparent;
+			} @else if $direction == top {
+				left: 50%;
+				margin-left: -$height/2;
+				top: -$height/2;
+				border-left: $height/2 solid transparent;
+				border-right: $height/2 solid transparent;
+				border-bottom: $height/2 solid $color;
+			} @else if $direction == bottom {
+				left: 50%;
+				margin-left: -$height/2;
+				bottom: -$height/2;
+				border-left: $height/2 solid transparent;
+				border-right: $height/2 solid transparent;
+				border-top: $height/2 solid $color;
+			}
+
+		} @else {
+			display: none;
+		}
+	}
+}

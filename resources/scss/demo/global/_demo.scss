@@ -33,6 +33,8 @@ li {
 	padding: 0 1em;
 	width: $max-width;
 	margin: 0 auto;
+	@include flex(1);
+	@include align-content(center);
 
 }
 

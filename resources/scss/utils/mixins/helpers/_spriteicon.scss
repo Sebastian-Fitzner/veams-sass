@@ -1,11 +1,15 @@
 /* ===================================================
 SPRITEICON MIXIN
 
-	- usage: @include spriteicon(filename);
+	- usage: @include sprite(filename);
 =================================================== */
 
-@mixin sprite($name) {
+@mixin sprite($name, $query: false) {
 	@extend %sprites-#{$name}-medium;
+
+	@if $query == false {
+		@extend %sprites-extend-#{$name}-medium;
+	}
 
 	.no-svg & {
 		@extend %no-svg-sprites-#{$name}-medium;

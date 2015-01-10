@@ -21,18 +21,34 @@ module.exports = {
 		}
 	},
 
-	pgGlobal: {
+	pgReset: {
 		files: [
 			{
 				// define your destination file
-				dest: '<%= paths.src %>/scss/_pg-global.scss',
+				dest: '<%= paths.src %>/scss/_pg-reset.scss',
 				// define your current working directory in which the sass files are located
 				cwd: '<%= paths.src %>/scss/',
 				// here you can build your _all.scss like you would do in _all.scss with sass-globbing
 				src: [
 					'global/_reset.scss',
-					'global/_print.scss',
-					'global/_font-base.scss'
+					'global/_font-base.scss',
+					'global/_settings.scss'
+				]
+			}
+		]
+	},
+	pgNormalize: {
+		files: [
+			{
+				// define your destination file
+				dest: '<%= paths.src %>/scss/_pg-normalize.scss',
+				// define your current working directory in which the sass files are located
+				cwd: '<%= paths.src %>/scss/',
+				// here you can build your _all.scss like you would do in _all.scss with sass-globbing
+				src: [
+					'global/_normalize.scss',
+					'global/_font-base.scss',
+					'global/_settings.scss'
 				]
 			}
 		]
@@ -48,7 +64,7 @@ module.exports = {
 				src: [
 					'utils/_system.scss',
 					'utils/mixins/**/*.scss',
-					'utils/extends/**/*.scss',
+					'utils/extends/**/*.scss'
 				]
 			}
 		]
@@ -63,13 +79,13 @@ module.exports = {
 				// here you can build your _all.scss like you would do in _all.scss with sass-globbing
 				src: [
 					'demo/global/_vars.scss',
-					'_pg-global.scss',
+					'_pg-reset.scss',
 					'_pg.scss',
 					'demo/global/_demo.scss',
-					'demo/icons/**/*.scss',
+					'demo/effects/**/*.scss',
 					'demo/regions/**/*.scss',
-					'modules/**/*.scss',
-					'components/**/*.scss',
+					'demo/modules/**/*.scss',
+					'demo/components/**/*.scss',
 					'demo/blocks/**/*.scss'
 				]
 			}

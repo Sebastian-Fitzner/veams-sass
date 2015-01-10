@@ -1,0 +1,33 @@
+/* ===================================================
+KEYFRAMES MIXIN
+=================================================== */
+
+@mixin keyframes($name) {
+	@if $webkit == true {
+		@-webkit-keyframes #{$name} {
+			@content;
+		}
+	}
+
+	@if $moz == true {
+		@-moz-keyframes #{$name} {
+			@content;
+		}
+	}
+
+	@if $ms == true {
+		@-ms-keyframes #{$name} {
+			@content;
+		}
+	}
+
+	@if $o == true {
+		@-o-keyframes #{$name} {
+			@content;
+		}
+	}
+
+	@keyframes #{$name} {
+		@content;
+	}
+}
