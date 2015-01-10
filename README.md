@@ -22,14 +22,21 @@ There are multiple files you can import.
 
 #### Main Files
 
-**`_pg-global`**
+**`_pg-reset`**
 
-`_pg-global.scss` is a file which contains your resets, font-base size and print styles: 
+`_pg-global.scss` is a file which contains your resets, font-base size and settings: 
 - _reset.scss
 - _font-base.scss
-- _print.scss
+- _settings.scss
 
-Just import this file at the beginning of your `scss` file. 
+**`_pg-normalize`**
+
+`_pg-normalize.scss` is a file which contains your normalize.scss, font-base size and settings: 
+- _reset.scss
+- _font-base.scss
+- _settings.scss
+
+Just import one of these files at the beginning of your `scss` file.
 
 **`_pg`**
 
