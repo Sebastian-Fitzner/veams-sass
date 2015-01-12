@@ -1,0 +1,11 @@
+{
+	"data": [
+		{
+			"article-class": false,
+			"article-header": true,
+			"article-h1": "Arrow Examples",
+			"article-md": "resources/data/pages/arrows/page__arrows.md",
+			"arrows": ["left", "right", "top", "bottom"]
+		}
+	]
+}

@@ -1,22 +1,22 @@
 $arrows: left right top bottom;
 
 @each $arrow in $arrows {
-	.arrow-#{$arrow} {
-		span {
-			@include fx-arrow($color: #000, $colorHover: #999, $direction: $arrow);
-			@include prefix(transition, all 300ms ease);
+	.c-article a.arrow-#{$arrow} {
+		@include fx-arrow($color: #000, $colorHover: #999, $height: 30px, $direction: $arrow);
+		@include prefix(transition, all 300ms ease);
 
-			height: 60px;
-			display: inline-block;
-			padding: 0 20px;
-			line-height: 60px;
-			background-color: #000;
-			color: #fff;
-			font-size: 1.8rem;
+		height: 60px;
+		display: inline-block;
+		padding: 0 20px;
+		line-height: 60px;
+		background-color: #000;
+		color: #fff;
+		font-size: 1.8rem;
+		float: left;
+		margin: 0 30px;
 
-			&:hover {
-				background-color: #999;
-			}
+		&:hover {
+			background-color: #999;
 		}
 	}
 }
