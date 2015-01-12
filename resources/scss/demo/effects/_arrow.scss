@@ -1,23 +1,21 @@
-.arrow {
-	span {
-		@include fx-arrow($color: #000, $direction: right);
-		@include prefix(transition, all 300ms ease);
+$arrows: left right top bottom;
 
-		height: 60px;
-		display: inline-block;
-		padding: 0 20px;
-		line-height: 60px;
-		background-color: #000;
-		color: #fff;
-		font-size: 1.8rem;
+@each $arrow in $arrows {
+	.arrow-#{$arrow} {
+		span {
+			@include fx-arrow($color: #000, $colorHover: #999, $direction: $arrow);
+			@include prefix(transition, all 300ms ease);
 
-		&:hover {
-			@extend %slide-moveToLeft;
+			height: 60px;
+			display: inline-block;
+			padding: 0 20px;
+			line-height: 60px;
+			background-color: #000;
+			color: #fff;
+			font-size: 1.8rem;
 
-			background-color: #999;
-
-			&:after {
-				border-left-color: #999;
+			&:hover {
+				background-color: #999;
 			}
 		}
 	}

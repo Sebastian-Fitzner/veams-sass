@@ -18,18 +18,27 @@ bower i pg-scss --save
 ---------------------------------------------------
 ### How to use
 
-There are multiple files you can import. 
+Just import the needed files into your project.
 
-#### Main Files
+**Example:**
 
-**`_pg-reset`**
+``` scss
+@import "pg-reset";
+@import "pg";
+@import "pg-animations";
+```
+
+---------------------------------------------------
+### Main Files
+
+#### `_pg-reset`
 
 `_pg-global.scss` is a file which contains your resets, font-base size and settings: 
 - _reset.scss
 - _font-base.scss
 - _settings.scss
 
-**`_pg-normalize`**
+#### `_pg-normalize`
 
 `_pg-normalize.scss` is a file which contains your normalize.scss, font-base size and settings: 
 - _reset.scss
@@ -38,13 +47,19 @@ There are multiple files you can import.
 
 Just import one of these files at the beginning of your `scss` file.
 
-**`_pg`**
+#### `_pg-helpers`
 
-`_pg.scss` is a file which contains your mixins and extends. 
+`_pg-helpers.scss` is a file which contains helpers and layout mixins.
 
-Just import `_pg.scss` into your `scss` file and you can start to use mixins and extends.
+This file is imported in `_pg.scss`.
 
-When you want to customize your imports just take the specific files.
+#### `_pg`
+
+`_pg.scss` is a file which contains all major helpers and mixins.
+
+#### `_pg-animations`
+
+`_pg-animations.scss` is a file which contains custom keyframes and animation sets. You have to import this file manually when you want to use it.
 
 ---------------------------------------------------
 ### Demo (WIP)

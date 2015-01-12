@@ -1,0 +1,35 @@
+/* ===================================================
+KEYFRAMES: SLIDES
+=================================================== */
+
+@include keyframes(rotateSlideOut) {
+	0% {
+	}
+	25% {
+		@include prefix(transform, translateZ(-500px));
+		opacity: .5;
+	}
+	75% {
+		@include prefix(transform, translateZ(-500px) translateX(-200%));
+		opacity: .5;
+	}
+	100% {
+		@include prefix(transform, translateZ(-500px) translateX(-200%));
+		opacity: .5;
+	}
+}
+
+@include keyframes(rotateSlideIn) {
+	0%, 25% {
+		@include prefix(transform, translateZ(-500px) translateX(200%));
+		opacity: .5;
+	}
+	75% {
+		@include prefix(transform, translateZ(-500px));
+		opacity: .5;
+	}
+	100% {
+		@include prefix(transform, translateZ(0) translateX(0));
+		opacity: 1;
+	}
+}

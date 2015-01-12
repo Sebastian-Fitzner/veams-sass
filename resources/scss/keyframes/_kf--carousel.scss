@@ -1,0 +1,68 @@
+/* ===================================================
+KEYFRAMES: CAROUSEL
+=================================================== */
+
+@include keyframes(rotateCarouselLeftOut) {
+	0% {
+	}
+	100% {
+		@include prefix(transform, translateX(-200%) scale(.4) rotateY(-65deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCarouselLeftIn) {
+	0% {
+		@include prefix(transform, translateX(200%) scale(.4) rotateY(65deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCarouselRightOut) {
+	0% {
+	}
+	100% {
+		@include prefix(transform, translateX(200%) scale(.4) rotateY(65deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCarouselRightIn) {
+	0% {
+		@include prefix(transform, translateX(-200%) scale(.4) rotateY(-65deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCarouselTopOut) {
+	0% {
+	}
+	100% {
+		@include prefix(transform, translateY(-200%) scale(.4) rotateY(65deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCarouselTopIn) {
+	0% {
+		@include prefix(transform, translateY(200%) scale(.4) rotateY(-65deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCarouselBottomOut) {
+	0% {
+	}
+	100% {
+		@include prefix(transform, translateY(200%) scale(.4) rotateY(-65deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCarouselBottomIn) {
+	0% {
+		opacity: .3;
+		-webkit-transform: translateY(-200%) scale(.4) rotateX(65deg);
+		transform: translateY(-200%) scale(.4) rotateX(65deg);
+	}
+}
