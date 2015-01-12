@@ -9,3 +9,11 @@ $webkit: true;
 $moz: true;
 $ms: true;
 $o: true;
+
+/* ---------------------------------------------------
+Animations
+--------------------------------------------------- */
+
+$transition-duration: 600ms;
+$transition-ease-method: ease;
+$transition-property: all;

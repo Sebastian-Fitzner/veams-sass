@@ -1,0 +1,67 @@
+/* ===================================================
+KEYFRAMES: ROOM WALLS
+=================================================== */
+
+@include keyframes(rotateRoomLeftOut) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateX(-100%) rotateY(90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateRoomLeftIn) {
+	from {
+		@include prefix(transform, translateX(100%) rotateY(-90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateRoomRightOut) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateX(100%) rotateY(-90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateRoomRightIn) {
+	from {
+		@include prefix(transform, translateX(-100%) rotateY(90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateRoomTopOut) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateY(-100%) rotateX(-90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateRoomTopIn) {
+	from {
+		@include prefix(transform, translateY(100%) rotateX(90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateRoomBottomOut) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateY(100%) rotateX(90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateRoomBottomIn) {
+	from {
+		@include prefix(transform, translateY(-100%) rotateX(-90deg));
+		opacity: .3;
+	}
+}

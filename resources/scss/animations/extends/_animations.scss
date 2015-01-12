@@ -1,0 +1,653 @@
+/* ===================================================
+ANIMATION SETS
+=================================================== */
+
+/* ---------------------------------------------------
+Move From To Fade
+--------------------------------------------------- */
+
+/*
+Move From To
+----------------------------- */
+%slide-moveToLeft {
+	@include prefix(animation, moveToLeft $transition-duration $transition-ease-method both);
+}
+
+%slide-moveFromLeft {
+	@include prefix(animation, moveFromLeft $transition-duration $transition-ease-method both);
+
+}
+
+%slide-moveToRight {
+	@include prefix(animation, moveToRight $transition-duration $transition-ease-method both);
+
+}
+
+%slide-moveFromRight {
+	@include prefix(animation, moveFromRight $transition-duration $transition-ease-method both);
+
+}
+
+%slide-moveToTop {
+	@include prefix(animation, moveToTop $transition-duration $transition-ease-method both);
+
+}
+
+%slide-moveFromTop {
+	@include prefix(animation, moveFromTop $transition-duration $transition-ease-method both);
+
+}
+
+%slide-moveToBottom {
+	@include prefix(animation, moveToBottom $transition-duration $transition-ease-method both);
+
+}
+
+%slide-moveFromBottom {
+	@include prefix(animation, moveFromBottom $transition-duration $transition-ease-method both);
+}
+
+/*
+Fade
+----------------------------- */
+%slide-fade {
+	@include prefix(animation, fade $transition-duration $transition-ease-method both);
+}
+
+/*
+Move From To and Fade
+----------------------------- */
+%slide-moveToLeftFade {
+	@include prefix(animation, moveToLeftFade $transition-duration $transition-ease-method both);
+}
+
+%slide-moveFromLeftFade {
+	@include prefix(animation, moveFromLeftFade $transition-duration $transition-ease-method both);
+}
+
+%slide-moveToRightFade {
+	@include prefix(animation, moveToRightFade $transition-duration $transition-ease-method both);
+}
+
+%slide-moveFromRightFade {
+	@include prefix(animation, moveFromRightFade $transition-duration $transition-ease-method both);
+}
+
+%slide-moveToTopFade {
+	@include prefix(animation, moveToTopFade $transition-duration $transition-ease-method both);
+}
+
+%slide-moveFromTopFade {
+	@include prefix(animation, moveFromTopFade $transition-duration $transition-ease-method both);
+}
+
+%slide-moveToBottomFade {
+	@include prefix(animation, moveToBottomFade $transition-duration $transition-ease-method both);
+}
+
+%slide-moveFromBottomFade {
+	@include prefix(animation, moveFromBottomFade $transition-duration $transition-ease-method both);
+}
+
+/* ---------------------------------------------------
+Scale and Fade
+--------------------------------------------------- */
+
+%slide-scaleDown {
+	@include prefix(animation, scaleDown $transition-duration $transition-ease-method both);
+}
+
+%slide-scaleUp {
+	@include prefix(animation, scaleUp $transition-duration $transition-ease-method both);
+}
+
+%slide-scaleUpDown {
+	@include prefix(animation, scaleUpDown $transition-duration $transition-ease-method both);
+}
+
+%slide-scaleDownUp {
+	@include prefix(animation, scaleDownUp $transition-duration $transition-ease-method both);
+}
+
+%slide-scaleDownCenter {
+	@include prefix(animation, scaleDownCenter $transition-duration $transition-ease-method both);
+}
+
+%slide-scaleUpCenter {
+	@include prefix(animation, scaleUpCenter $transition-duration $transition-ease-method both);
+}
+
+/* ---------------------------------------------------
+Rotate First and Scale
+--------------------------------------------------- */
+
+%slide-rotateRightSideFirst {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotateRightSideFirst $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateLeftSideFirst {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotateLeftSideFirst $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateTopSideFirst {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotateTopSideFirst $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateBottomSideFirst {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotateBottomSideFirst $transition-duration $transition-ease-method both);
+}
+
+/* ---------------------------------------------------
+Flip
+--------------------------------------------------- */
+
+%slide-flipOutRight {
+	@include prefix(transform-origin, 50% 50%);
+	@include prefix(animation, flipOutRight $transition-duration ease-in both);
+}
+
+%slide-flipInLeft {
+	@include prefix(transform-origin, 50% 50%);
+	@include prefix(animation, flipInLeft $transition-duration ease-out both);
+}
+
+%slide-flipOutLeft {
+	@include prefix(transform-origin, 50% 50%);
+	@include prefix(animation, flipOutLeft $transition-duration ease-in both);
+}
+
+%slide-flipInRight {
+	@include prefix(transform-origin, 50% 50%);
+	@include prefix(animation, flipInRight $transition-duration ease-out both);
+}
+
+%slide-flipOutTop {
+	@include prefix(transform-origin, 50% 50%);
+	@include prefix(animation, flipOutTop $transition-duration ease-in both);
+}
+
+%slide-flipInBottom {
+	@include prefix(transform-origin, 50% 50%);
+	@include prefix(animation, flipInBottom $transition-duration ease-out both);
+
+}
+
+%slide-flipOutBottom {
+	@include prefix(transform-origin, 50% 50%);
+	@include prefix(animation, flipOutBottom $transition-duration ease-in both);
+}
+
+%slide-flipInTop {
+	@include prefix(transform-origin, 50% 50%);
+	@include prefix(animation, flipInTop $transition-duration ease-out both);
+}
+
+/* ---------------------------------------------------
+Rotate Fall
+--------------------------------------------------- */
+%slide-rotateFall {
+	@include prefix(transform-origin, 0% 0%);
+	@include prefix(animation, rotateFall $transition-duration ease-in both);
+}
+
+/* ---------------------------------------------------
+Rotate Newspaper
+--------------------------------------------------- */
+%slide-rotateOutNewspaper {
+	@include prefix(transform-origin, 50% 50%);
+	@include prefix(animation, rotateOutNewspaper $transition-duration ease-in both);
+}
+
+%slide-rotateInNewspaper {
+	@include prefix(transform-origin, 50% 50%);
+	@include prefix(animation, rotateInNewspaper $transition-duration ease-out both);
+}
+
+/* ---------------------------------------------------
+Push and Pull
+--------------------------------------------------- */
+
+/*
+Push
+----------------------------- */
+%slide-rotatePushLeft {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotatePushLeft $transition-duration $transition-ease-method both);
+}
+
+%slide-rotatePushRight {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotatePushRight $transition-duration $transition-ease-method both);
+}
+
+%slide-rotatePushTop {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotatePushTop $transition-duration $transition-ease-method both);
+}
+
+%slide-rotatePushBottom {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotatePushBottom $transition-duration $transition-ease-method both);
+}
+
+/*
+Pull
+----------------------------- */
+%slide-rotatePullRight {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotatePullRight $transition-duration $transition-ease-method both);
+}
+
+%slide-rotatePullLeft {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotatePullLeft $transition-duration $transition-ease-method both);
+}
+
+%slide-rotatePullTop {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotatePullTop $transition-duration $transition-ease-method both);
+}
+
+%slide-rotatePullBottom {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotatePullBottom $transition-duration $transition-ease-method both);
+}
+
+/* ---------------------------------------------------
+Fold and Unfold
+--------------------------------------------------- */
+
+/*
+Fold
+----------------------------- */
+%slide-rotateFoldRight {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotateFoldRight $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateFoldLeft {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotateFoldLeft $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateFoldTop {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotateFoldTop $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateFoldBottom {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotateFoldBottom $transition-duration $transition-ease-method both);
+}
+
+/*
+Unfold
+----------------------------- */
+%slide-rotateUnfoldLeft {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotateUnfoldLeft $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateUnfoldRight {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotateUnfoldRight $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateUnfoldTop {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotateUnfoldTop $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateUnfoldBottom {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotateUnfoldBottom $transition-duration $transition-ease-method both);
+}
+
+/* ---------------------------------------------------
+Room Walls
+--------------------------------------------------- */
+
+%slide-rotateRoomLeftOut {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotateRoomLeftOut $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateRoomLeftIn {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotateRoomLeftIn $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateRoomRightOut {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotateRoomRigthtOut $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateRoomRightIn {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotateRoomRightIn $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateRoomTopOut {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotateRoomTopOut $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateRoomTopIn {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotateRoomTopIn $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateRoomBottomOut {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotateRoomBottomOut $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateRoomBottomIn {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotateRoomBottomIn $transition-duration $transition-ease-method both);
+}
+
+/* ---------------------------------------------------
+Cube
+--------------------------------------------------- */
+
+%slide-rotateCubeLeftOut {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotateCubeLeftOut $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateCubeLeftIn {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotateCubeLeftIn $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateCubeRightOut {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotateCubeRightOut $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateCubeRightIn {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotateCubeRightIn $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateCubeTopOut {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotateCubeTopOut $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateCubeTopIn {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotateCubeTopIn $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateCubeBottomOut {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotateCubeBottomOut $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateCubeBottomIn {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotateCubeBottomIn $transition-duration $transition-ease-method both);
+}
+
+/* ---------------------------------------------------
+Carousel
+--------------------------------------------------- */
+
+%slide-rotateCarouselLeftOut {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotateCarouselLeftOut $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateCarouselLeftIn {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotateCarouselLeftIn $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateCarouselRightOut {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotateCarouselRightOut $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateCarouselRightIn {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotateCarouselRightIn $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateCarouselTopOut {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotateCarouselTopOut $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateCarouselTopIn {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotateCarouselTopIn $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateCarouselBottomOut {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotateCarouselBottomOut $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateCarouselBottomIn {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotateCarouselBottomIn $transition-duration $transition-ease-method both);
+}
+
+/* ---------------------------------------------------
+Sides
+--------------------------------------------------- */
+
+%slide-rotateSidesOut {
+	@include prefix(transform-origin, -50% 50%);
+	@include prefix(animation, rotateSidesOut $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateSidesIn {
+	@include prefix(transform-origin, 150% 50%);
+	@include prefix(animation, rotateSidesIn $transition-duration $transition-ease-method both);
+
+}
+
+/* ---------------------------------------------------
+Slides
+--------------------------------------------------- */
+%slide-rotateSlideOut {
+	@include prefix(animation, rotateSlideOut $transition-duration $transition-ease-method both);
+}
+
+%slide-rotateSlideIn {
+	@include prefix(animation, rotateSlideIn $transition-duration $transition-ease-method both);
+}
+
+/* ---------------------------------------------------
+ Keyframes
+ --------------------------------------------------- */
+
+
+// Carousel
+
+@keyframes rotateCarouselLeftOut {
+	from {
+	}
+	to {
+		opacity: .3;
+		-webkit-transform: translateX(-150%) scale(.4) rotateY(-65deg);
+		transform: translateX(-150%) scale(.4) rotateY(-65deg);
+	}
+}
+
+@keyframes rotateCarouselLeftIn {
+	from {
+		opacity: .3;
+		-webkit-transform: translateX(200%) scale(.4) rotateY(65deg);
+		transform: translateX(200%) scale(.4) rotateY(65deg);
+	}
+}
+
+@keyframes rotateCarouselRightOut {
+	from {
+	}
+	to {
+		opacity: .3;
+		-webkit-transform: translateX(200%) scale(.4) rotateY(65deg);
+		transform: translateX(200%) scale(.4) rotateY(65deg);
+	}
+}
+
+@keyframes rotateCarouselRightIn {
+	from {
+		opacity: .3;
+		-webkit-transform: translateX(-200%) scale(.4) rotateY(-65deg);
+		transform: translateX(-200%) scale(.4) rotateY(-65deg);
+	}
+}
+
+@keyframes rotateCarouselTopOut {
+	from {
+	}
+	to {
+		opacity: .3;
+		-webkit-transform: translateY(-200%) scale(.4) rotateX(65deg);
+		transform: translateY(-200%) scale(.4) rotateX(65deg);
+	}
+}
+
+@keyframes rotateCarouselTopIn {
+	from {
+		opacity: .3;
+		-webkit-transform: translateY(200%) scale(.4) rotateX(-65deg);
+		transform: translateY(200%) scale(.4) rotateX(-65deg);
+	}
+}
+
+@keyframes rotateCarouselBottomOut {
+	from {
+	}
+	to {
+		opacity: .3;
+		-webkit-transform: translateY(200%) scale(.4) rotateX(-65deg);
+		transform: translateY(200%) scale(.4) rotateX(-65deg);
+	}
+}
+
+@keyframes rotateCarouselBottomIn {
+	from {
+		opacity: .3;
+		-webkit-transform: translateY(-200%) scale(.4) rotateX(65deg);
+		transform: translateY(-200%) scale(.4) rotateX(65deg);
+	}
+}
+
+// Sides
+
+@-webkit-keyframes rotateSidesOut {
+	from {
+	}
+	to {
+		opacity: 0;
+		-webkit-transform: translateZ(-500px) rotateY(90deg);
+	}
+}
+
+@keyframes rotateSidesOut {
+	from {
+	}
+	to {
+		opacity: 0;
+		-webkit-transform: translateZ(-500px) rotateY(90deg);
+		transform: translateZ(-500px) rotateY(90deg);
+	}
+}
+
+@-webkit-keyframes rotateSidesIn {
+	from {
+		opacity: 0;
+		-webkit-transform: translateZ(-500px) rotateY(-90deg);
+	}
+}
+
+@keyframes rotateSidesIn {
+	from {
+		opacity: 0;
+		-webkit-transform: translateZ(-500px) rotateY(-90deg);
+		transform: translateZ(-500px) rotateY(-90deg);
+	}
+}
+
+// Slide
+
+@-webkit-keyframes rotateSlideOut {
+	0% {
+	}
+	25% {
+		opacity: .5;
+		-webkit-transform: translateZ(-500px);
+	}
+	75% {
+		opacity: .5;
+		-webkit-transform: translateZ(-500px) translateX(-200%);
+	}
+	100% {
+		opacity: .5;
+		-webkit-transform: translateZ(-500px) translateX(-200%);
+	}
+}
+
+@keyframes rotateSlideOut {
+	0% {
+	}
+	25% {
+		opacity: .5;
+		-webkit-transform: translateZ(-500px);
+		transform: translateZ(-500px);
+	}
+	75% {
+		opacity: .5;
+		-webkit-transform: translateZ(-500px) translateX(-200%);
+		transform: translateZ(-500px) translateX(-200%);
+	}
+	100% {
+		opacity: .5;
+		-webkit-transform: translateZ(-500px) translateX(-200%);
+		transform: translateZ(-500px) translateX(-200%);
+	}
+}
+
+@-webkit-keyframes rotateSlideIn {
+	0%, 25% {
+		opacity: .5;
+		-webkit-transform: translateZ(-500px) translateX(200%);
+	}
+	75% {
+		opacity: .5;
+		-webkit-transform: translateZ(-500px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateZ(0) translateX(0);
+	}
+}
+
+@keyframes rotateSlideIn {
+	0%, 25% {
+		opacity: .5;
+		-webkit-transform: translateZ(-500px) translateX(200%);
+		transform: translateZ(-500px) translateX(200%);
+	}
+	75% {
+		opacity: .5;
+		-webkit-transform: translateZ(-500px);
+		transform: translateZ(-500px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateZ(0) translateX(0);
+		transform: translateZ(0) translateX(0);
+	}
+}

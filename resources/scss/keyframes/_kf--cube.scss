@@ -1,0 +1,99 @@
+/* ===================================================
+KEYFRAMES: CUBE
+=================================================== */
+
+@include keyframes(rotateCubeLeftOut) {
+	0% {
+	}
+	50% {
+		@include prefix(transform, translateX(-50%) translateZ(-200px) rotateY(-45deg));
+		@include prefix(animation-timing-function, ease-out);
+	}
+	100% {
+		@include prefix(transform, translateX(-100%) rotateY(-90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCubeLeftIn) {
+	0% {
+		@include prefix(transform, translateX(100%) rotateY(90deg));
+		opacity: .3;
+	}
+	50% {
+		@include prefix(transform, translateX(50%) translateZ(-200px) rotateY(45deg));
+		@include prefix(animation-timing-function, ease-out);
+	}
+}
+
+@include keyframes(rotateCubeRightOut) {
+	0% {
+	}
+	50% {
+		@include prefix(transform, translateX(50%) translateZ(-200px) rotateY(45deg));
+		@include prefix(animation-timing-function, ease-out);
+	}
+	100% {
+		@include prefix(transform, translateX(100%) rotateY(90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCubeRightIn) {
+	0% {
+		@include prefix(transform, translateX(-100%) rotateY(-90deg));
+		opacity: .3;
+	}
+	50% {
+		@include prefix(transform, translateX(-50%) translateZ(-200px) rotateY(-45deg));
+		@include prefix(animation-timing-function, ease-out);
+	}
+}
+
+@include keyframes(rotateCubeTopOut) {
+	0% {
+	}
+	50% {
+		@include prefix(transform, translateY(-50%) translateZ(-200px) rotateX(45deg));
+		@include prefix(animation-timing-function, ease-out);
+	}
+	100% {
+		@include prefix(transform, translateY(-100%) rotateX(90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCubeTopIn) {
+	0% {
+		@include prefix(transform, translateY(100%) rotateX(-90deg));
+		opacity: .3;
+	}
+	50% {
+		@include prefix(transform, translateY(50%) translateZ(-200px) rotateX(-45deg));
+		@include prefix(animation-timing-function, ease-out);
+	}
+}
+
+@include keyframes(rotateCubeBottomOut) {
+	0% {
+	}
+	50% {
+		@include prefix(transform, translateY(50%) translateZ(-200px) rotateX(-45deg));
+		@include prefix(animation-timing-function, ease-out);
+	}
+	100% {
+		@include prefix(transform, translateY(100%) rotateX(-90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCubeBottomIn) {
+	0% {
+		@include prefix(transform, translateY(-100%) rotateX(90deg));
+		opacity: .3;
+	}
+	50% {
+		@include prefix(transform, translateY(-50%) translateZ(-200px) rotateX(45deg));
+		@include prefix(animation-timing-function, ease-out);
+	}
+}

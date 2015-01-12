@@ -53,6 +53,36 @@ module.exports = {
 			}
 		]
 	},
+	pgHelper: {
+		files: [
+			{
+				// define your destination file
+				dest: '<%= paths.src %>/scss/_pg-helpers.scss',
+				// define your current working directory in which the sass files are located
+				cwd: '<%= paths.src %>/scss/',
+				// here you can build your _all.scss like you would do in _all.scss with sass-globbing
+				src: [
+					'_helpers/**/*.scss',
+					'layout/**/*.scss'
+				]
+			}
+		]
+	},
+	pgAnimation: {
+		files: [
+			{
+				// define your destination file
+				dest: '<%= paths.src %>/scss/_pg-animations.scss',
+				// define your current working directory in which the sass files are located
+				cwd: '<%= paths.src %>/scss/',
+				// here you can build your _all.scss like you would do in _all.scss with sass-globbing
+				src: [
+					'keyframes/**/*.scss',
+					'animations/**/*.scss'
+				]
+			}
+		]
+	},
 	pg: {
 		files: [
 			{
@@ -62,9 +92,10 @@ module.exports = {
 				cwd: '<%= paths.src %>/scss/',
 				// here you can build your _all.scss like you would do in _all.scss with sass-globbing
 				src: [
-					'utils/_system.scss',
-					'utils/mixins/**/*.scss',
-					'utils/extends/**/*.scss'
+					'_pg-helpers.scss',
+					'effects/**/*.scss',
+					'css3/**/*.scss',
+					'general-extends/**/*.scss'
 				]
 			}
 		]
@@ -81,6 +112,7 @@ module.exports = {
 					'demo/global/_vars.scss',
 					'_pg-reset.scss',
 					'_pg.scss',
+					'_pg-animations.scss',
 					'demo/global/_demo.scss',
 					'demo/effects/**/*.scss',
 					'demo/regions/**/*.scss',

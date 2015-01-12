@@ -1,0 +1,19 @@
+/* ===================================================
+KEYFRAMES: NEWSPAPER
+=================================================== */
+
+@include keyframes(rotateOutNewspaper) {
+	from {
+	}
+	to {
+		opacity: 0;
+		@include prefix(transform, translateZ(-3000px) rotateZ(360deg));
+	}
+}
+
+@include keyframes(rotateInNewspaper) {
+	from {
+		opacity: 0;
+		@include prefix(transform, translateZ(-3000px) rotateZ(-360deg));
+	}
+}

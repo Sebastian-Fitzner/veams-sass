@@ -1,0 +1,149 @@
+/* ===================================================
+KEYFRAMES: MOVE FROM TO AND FADE
+=================================================== */
+
+@include keyframes(moveToLeft) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateX(-100%));
+		@include prefix(transform, translate3d(-100%, 0, 0));
+	}
+}
+
+@include keyframes(moveFromLeft) {
+	from {
+		@include prefix(transform, translateX(-100%));
+		@include prefix(transform, translate3d(-100%, 0, 0));
+	}
+}
+
+@include keyframes(moveToRight) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateX(100%));
+		@include prefix(transform, translate3d(100%, 0, 0));
+	}
+}
+
+@include keyframes(moveFromRight) {
+	from {
+		@include prefix(transform, translateX(100%));
+		@include prefix(transform, translate3d(100%, 0, 0));
+	}
+}
+
+@include keyframes(moveToTop) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateY(-100%));
+		@include prefix(transform, translate3d(0, -100%, 0));
+	}
+}
+
+@include keyframes(moveFromTop) {
+	from {
+		@include prefix(transform, translateY(-100%));
+		@include prefix(transform, translate3d(0, -100%, 0));
+	}
+}
+
+@include keyframes(moveToBottom) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateY(100%));
+		@include prefix(transform, translate3d(0, 100%, 0));
+	}
+}
+
+@include keyframes(moveFromBottom) {
+	from {
+		@include prefix(transform, translateY(100%));
+		@include prefix(transform, translate3d(0, 100%, 0));
+	}
+}
+
+/* fade */
+@include keyframes(fade) {
+	from {
+	}
+	to {
+		opacity: 0.3;
+	}
+}
+
+/* move from / to and fade */
+@include keyframes(moveToLeftFade) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateX(-100%));
+		@include prefix(transform, translate3d(-100%, 0, 0));
+		opacity: 0.3;
+	}
+}
+
+@include keyframes(moveFromLeftFade) {
+	from {
+		@include prefix(transform, translateX(-100%));
+		@include prefix(transform, translate3d(-100%, 0, 0));
+		opacity: 0.3;
+	}
+}
+
+@include keyframes(moveToRightFade) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateX(100%));
+		@include prefix(transform, translate3d(100%, 0, 0));
+		opacity: 0.3;
+	}
+}
+
+@include keyframes(moveFromRightFade) {
+	from {
+		@include prefix(transform, translateX(100%));
+		@include prefix(transform, translate3d(100%, 0, 0));
+		opacity: 0.3;
+	}
+}
+
+@include keyframes(moveToTopFade) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateY(-100%));
+		@include prefix(transform, translate3d(0, -100%, 0));
+		opacity: 0.3;
+	}
+}
+
+@include keyframes(moveFromTopFade) {
+	from {
+		@include prefix(transform, translateY(-100%));
+		@include prefix(transform, translate3d(0, -100%, 0));
+		opacity: 0.3;
+	}
+}
+
+@include keyframes(moveToBottomFade) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateY(100%));
+		@include prefix(transform, translate3d(0, 100%, 0));
+		opacity: 0.3;
+	}
+}
+
+@include keyframes(moveFromBottomFade) {
+	from {
+		@include prefix(transform, translateY(100%));
+		@include prefix(transform, translate3d(0, 100%, 0));
+		opacity: 0.3;
+	}
+}

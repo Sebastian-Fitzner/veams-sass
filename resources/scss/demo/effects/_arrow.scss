@@ -12,6 +12,8 @@
 		font-size: 1.8rem;
 
 		&:hover {
+			@extend %slide-moveToLeft;
+
 			background-color: #999;
 
 			&:after {

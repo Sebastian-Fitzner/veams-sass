@@ -1,0 +1,59 @@
+/* ===================================================
+KEYFRAMES: ROTATE SIDES AND SCALE
+=================================================== */
+
+@include keyframes(rotateRightSideFirst) {
+	0% {
+	}
+	40% {
+		opacity: .8;
+		@include prefix(transform, rotateY(15deg));
+		@include prefix(animation-timing-function, ease-out);
+	}
+	100% {
+		opacity: 0;
+		@include prefix(transform, scale(0.8) translateZ(-200px));
+	}
+}
+
+@include keyframes(rotateLeftSideFirst) {
+	0% {
+	}
+	40% {
+		opacity: .8;
+		@include prefix(transform, rotateY(-15deg));
+		@include prefix(animation-timing-function, ease-out);
+	}
+	100% {
+		opacity: 0;
+		@include prefix(transform, scale(0.8) translateZ(-200px));
+	}
+}
+
+@include keyframes(rotateTopSideFirst) {
+	0% {
+	}
+	40% {
+		opacity: .8;
+		@include prefix(transform, rotateX(-15deg));
+		@include prefix(animation-timing-function, ease-out);
+	}
+	100% {
+		opacity: 0;
+		@include prefix(transform, scale(0.8) translateZ(-200px));
+	}
+}
+
+@include keyframes(rotateBottomSideFirst) {
+	0% {
+	}
+	40% {
+		opacity: .8;
+		@include prefix(transform, rotateX(-15deg));
+		@include prefix(animation-timing-function, ease-out);
+	}
+	100% {
+		opacity: 0;
+		@include prefix(transform, scale(0.8) translateZ(-200px));
+	}
+}
