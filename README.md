@@ -41,7 +41,7 @@ Just import the needed files into your project.
 #### `_pg-normalize`
 
 `_pg-normalize.scss` is a file which contains your normalize.scss, font-base size and settings: 
-- _reset.scss
+- - _normalize.scss
 - _font-base.scss
 - _settings.scss
 
