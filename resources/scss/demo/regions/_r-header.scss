@@ -1,6 +1,33 @@
 .r-header {
 	position: relative;
+	z-index: -1;
+
+	overflow: hidden;
+
+	margin-top: -100px;
+	padding: 80px 0 20px;
 
 	border-bottom: 1px solid #fff;
-	background: darken($color-logo, 15);
+	background: rgba($color-darkBlue, 1);
+
+	@include addRotation(2deg);
+	@include breakpoint(1280px) {
+		padding-top: 65px;
+	}
+	@include breakpoint(1680px) {
+		padding-top: 50px;
+	}
+	@include media($tablet) {
+		padding-bottom: 10px;
+	}
+	@include media($mobile) {
+		padding-top: 75px;
+		padding-bottom: 0;
+	}
+	.header__rotate {
+		padding-right: $nav-width;
+		padding-left: $nav-width;
+
+		@include transform(rotate(-2deg));
+	}
 }

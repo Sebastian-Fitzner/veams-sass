@@ -10,83 +10,83 @@ Move From To Fade
 Move From To
 ----------------------------- */
 %slide-moveToLeft {
-	@include prefix(animation, moveToLeft $transition-duration $transition-ease-method both);
+	@include slide-moveToLeft($transition-duration, $transition-ease-method);
 }
 
 %slide-moveFromLeft {
-	@include prefix(animation, moveFromLeft $transition-duration $transition-ease-method both);
+	@include slide-moveFromLeft($transition-duration, $transition-ease-method);
 
 }
 
 %slide-moveToRight {
-	@include prefix(animation, moveToRight $transition-duration $transition-ease-method both);
+	@include slide-moveToRight($transition-duration, $transition-ease-method);
 
 }
 
 %slide-moveFromRight {
-	@include prefix(animation, moveFromRight $transition-duration $transition-ease-method both);
+	@include slide-moveFromRight($transition-duration, $transition-ease-method);
 
 }
 
 %slide-moveToTop {
-	@include prefix(animation, moveToTop $transition-duration $transition-ease-method both);
+	@include slide-moveToTop($transition-duration, $transition-ease-method);
 
 }
 
 %slide-moveFromTop {
-	@include prefix(animation, moveFromTop $transition-duration $transition-ease-method both);
+	@include slide-moveFromTop($transition-duration, $transition-ease-method);
 
 }
 
 %slide-moveToBottom {
-	@include prefix(animation, moveToBottom $transition-duration $transition-ease-method both);
+	@include slide-moveToBottom($transition-duration, $transition-ease-method);
 
 }
 
 %slide-moveFromBottom {
-	@include prefix(animation, moveFromBottom $transition-duration $transition-ease-method both);
+	@include slide-moveFromBottom($transition-duration, $transition-ease-method);
 }
 
 /*
 Fade
 ----------------------------- */
 %slide-fade {
-	@include prefix(animation, fade $transition-duration $transition-ease-method both);
+	@include slide-fade($transition-duration, $transition-ease-method);
 }
 
 /*
 Move From To and Fade
 ----------------------------- */
 %slide-moveToLeftFade {
-	@include prefix(animation, moveToLeftFade $transition-duration $transition-ease-method both);
+	@include slide-moveToLeftFade($transition-duration, $transition-ease-method);
 }
 
 %slide-moveFromLeftFade {
-	@include prefix(animation, moveFromLeftFade $transition-duration $transition-ease-method both);
+	@include slide-moveFromLeftFade($transition-duration, $transition-ease-method);
 }
 
 %slide-moveToRightFade {
-	@include prefix(animation, moveToRightFade $transition-duration $transition-ease-method both);
+	@include slide-moveToRightFade($transition-duration, $transition-ease-method);
 }
 
 %slide-moveFromRightFade {
-	@include prefix(animation, moveFromRightFade $transition-duration $transition-ease-method both);
+	@include slide-moveFromRightFade($transition-duration, $transition-ease-method);
 }
 
 %slide-moveToTopFade {
-	@include prefix(animation, moveToTopFade $transition-duration $transition-ease-method both);
+	@include slide-moveToTopFade($transition-duration, $transition-ease-method);
 }
 
 %slide-moveFromTopFade {
-	@include prefix(animation, moveFromTopFade $transition-duration $transition-ease-method both);
+	@include slide-moveFromTopFade($transition-duration, $transition-ease-method);
 }
 
 %slide-moveToBottomFade {
-	@include prefix(animation, moveToBottomFade $transition-duration $transition-ease-method both);
+	@include slide-moveToBottomFade($transition-duration, $transition-ease-method);
 }
 
 %slide-moveFromBottomFade {
-	@include prefix(animation, moveFromBottomFade $transition-duration $transition-ease-method both);
+	@include slide-moveFromBottomFade($transition-duration, $transition-ease-method);
 }
 
 /* ---------------------------------------------------
@@ -94,27 +94,27 @@ Scale and Fade
 --------------------------------------------------- */
 
 %slide-scaleDown {
-	@include prefix(animation, scaleDown $transition-duration $transition-ease-method both);
+	@include slide-scaleDown($transition-duration, $transition-ease-method);
 }
 
 %slide-scaleUp {
-	@include prefix(animation, scaleUp $transition-duration $transition-ease-method both);
+	@include slide-scaleUp($transition-duration, $transition-ease-method);
 }
 
 %slide-scaleUpDown {
-	@include prefix(animation, scaleUpDown $transition-duration $transition-ease-method both);
+	@include slide-scaleUpDown($transition-duration, $transition-ease-method);
 }
 
 %slide-scaleDownUp {
-	@include prefix(animation, scaleDownUp $transition-duration $transition-ease-method both);
+	@include slide-scaleDownUp($transition-duration, $transition-ease-method);
 }
 
 %slide-scaleDownCenter {
-	@include prefix(animation, scaleDownCenter $transition-duration $transition-ease-method both);
+	@include slide-scaleDownCenter($transition-duration, $transition-ease-method);
 }
 
 %slide-scaleUpCenter {
-	@include prefix(animation, scaleUpCenter $transition-duration $transition-ease-method both);
+	@include slide-scaleUpCenter($transition-duration, $transition-ease-method);
 }
 
 /* ---------------------------------------------------
@@ -122,23 +122,19 @@ Rotate First and Scale
 --------------------------------------------------- */
 
 %slide-rotateRightSideFirst {
-	@include prefix(transform-origin, 0% 50%);
-	@include prefix(animation, rotateRightSideFirst $transition-duration $transition-ease-method both);
+	@include slide-rotateRightSideFirst($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateLeftSideFirst {
-	@include prefix(transform-origin, 100% 50%);
-	@include prefix(animation, rotateLeftSideFirst $transition-duration $transition-ease-method both);
+	@include slide-rotateLeftSideFirst($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateTopSideFirst {
-	@include prefix(transform-origin, 50% 100%);
-	@include prefix(animation, rotateTopSideFirst $transition-duration $transition-ease-method both);
+	@include slide-rotateTopSideFirst($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateBottomSideFirst {
-	@include prefix(transform-origin, 50% 0%);
-	@include prefix(animation, rotateBottomSideFirst $transition-duration $transition-ease-method both);
+	@include slide-rotateBottomSideFirst($transition-duration, $transition-ease-method);
 }
 
 /* ---------------------------------------------------
@@ -146,65 +142,53 @@ Flip
 --------------------------------------------------- */
 
 %slide-flipOutRight {
-	@include prefix(transform-origin, 50% 50%);
-	@include prefix(animation, flipOutRight $transition-duration ease-in both);
+	@include slide-flipOutRight($transition-duration, ease-in);
 }
 
 %slide-flipInLeft {
-	@include prefix(transform-origin, 50% 50%);
-	@include prefix(animation, flipInLeft $transition-duration ease-out both);
+	@include slide-flipInLeft($transition-duration, ease-out);
 }
 
 %slide-flipOutLeft {
-	@include prefix(transform-origin, 50% 50%);
-	@include prefix(animation, flipOutLeft $transition-duration ease-in both);
+	@include slide-flipOutLeft($transition-duration, ease-in);
 }
 
 %slide-flipInRight {
-	@include prefix(transform-origin, 50% 50%);
-	@include prefix(animation, flipInRight $transition-duration ease-out both);
+	@include slide-flipInRight($transition-duration, ease-out);
 }
 
 %slide-flipOutTop {
-	@include prefix(transform-origin, 50% 50%);
-	@include prefix(animation, flipOutTop $transition-duration ease-in both);
+	@include slide-flipOutTop($transition-duration, ease-in);
 }
 
 %slide-flipInBottom {
-	@include prefix(transform-origin, 50% 50%);
-	@include prefix(animation, flipInBottom $transition-duration ease-out both);
-
+	@include slide-flipInBottom($transition-duration, ease-out);
 }
 
 %slide-flipOutBottom {
-	@include prefix(transform-origin, 50% 50%);
-	@include prefix(animation, flipOutBottom $transition-duration ease-in both);
+	@include slide-flipOutBottom($transition-duration, ease-in);
 }
 
 %slide-flipInTop {
-	@include prefix(transform-origin, 50% 50%);
-	@include prefix(animation, flipInTop $transition-duration ease-out both);
+	@include slide-flipInTop($transition-duration, ease-out);
 }
 
 /* ---------------------------------------------------
 Rotate Fall
 --------------------------------------------------- */
 %slide-rotateFall {
-	@include prefix(transform-origin, 0% 0%);
-	@include prefix(animation, rotateFall $transition-duration ease-in both);
+	@include slide-rotateFall($transition-duration, ease-in);
 }
 
 /* ---------------------------------------------------
 Rotate Newspaper
 --------------------------------------------------- */
 %slide-rotateOutNewspaper {
-	@include prefix(transform-origin, 50% 50%);
-	@include prefix(animation, rotateOutNewspaper $transition-duration ease-in both);
+	@include slide-rotateOutNewspaper($transition-duration, ease-in);
 }
 
 %slide-rotateInNewspaper {
-	@include prefix(transform-origin, 50% 50%);
-	@include prefix(animation, rotateInNewspaper $transition-duration ease-out both);
+	@include slide-rotateInNewspaper($transition-duration, ease-out);
 }
 
 /* ---------------------------------------------------
@@ -215,46 +199,38 @@ Push and Pull
 Push
 ----------------------------- */
 %slide-rotatePushLeft {
-	@include prefix(transform-origin, 0% 50%);
-	@include prefix(animation, rotatePushLeft $transition-duration $transition-ease-method both);
+	@include slide-rotatePushLeft($transition-duration, $transition-ease-method);
 }
 
 %slide-rotatePushRight {
-	@include prefix(transform-origin, 100% 50%);
-	@include prefix(animation, rotatePushRight $transition-duration $transition-ease-method both);
+	@include slide-rotatePushRight($transition-duration, $transition-ease-method);
 }
 
 %slide-rotatePushTop {
-	@include prefix(transform-origin, 50% 0%);
-	@include prefix(animation, rotatePushTop $transition-duration $transition-ease-method both);
+	@include slide-rotatePushTop($transition-duration, $transition-ease-method);
 }
 
 %slide-rotatePushBottom {
-	@include prefix(transform-origin, 50% 100%);
-	@include prefix(animation, rotatePushBottom $transition-duration $transition-ease-method both);
+	@include slide-rotatePushBottom($transition-duration, $transition-ease-method);
 }
 
 /*
 Pull
 ----------------------------- */
 %slide-rotatePullRight {
-	@include prefix(transform-origin, 100% 50%);
-	@include prefix(animation, rotatePullRight $transition-duration $transition-ease-method both);
+	@include slide-rotatePullRight($transition-duration, $transition-ease-method);
 }
 
 %slide-rotatePullLeft {
-	@include prefix(transform-origin, 0% 50%);
-	@include prefix(animation, rotatePullLeft $transition-duration $transition-ease-method both);
+	@include slide-rotatePullLeft($transition-duration, $transition-ease-method);
 }
 
 %slide-rotatePullTop {
-	@include prefix(transform-origin, 50% 0%);
-	@include prefix(animation, rotatePullTop $transition-duration $transition-ease-method both);
+	@include slide-rotatePullTop($transition-duration, $transition-ease-method);
 }
 
 %slide-rotatePullBottom {
-	@include prefix(transform-origin, 50% 100%);
-	@include prefix(animation, rotatePullBottom $transition-duration $transition-ease-method both);
+	@include slide-rotatePullBottom($transition-duration, $transition-ease-method);
 }
 
 /* ---------------------------------------------------
@@ -265,46 +241,38 @@ Fold and Unfold
 Fold
 ----------------------------- */
 %slide-rotateFoldRight {
-	@include prefix(transform-origin, 0% 50%);
-	@include prefix(animation, rotateFoldRight $transition-duration $transition-ease-method both);
+	@include slide-rotateFoldRight($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateFoldLeft {
-	@include prefix(transform-origin, 100% 50%);
-	@include prefix(animation, rotateFoldLeft $transition-duration $transition-ease-method both);
+	@include slide-rotateFoldLeft($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateFoldTop {
-	@include prefix(transform-origin, 50% 100%);
-	@include prefix(animation, rotateFoldTop $transition-duration $transition-ease-method both);
+	@include slide-rotateFoldTop($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateFoldBottom {
-	@include prefix(transform-origin, 50% 0%);
-	@include prefix(animation, rotateFoldBottom $transition-duration $transition-ease-method both);
+	@include slide-rotateFoldBottom($transition-duration, $transition-ease-method);
 }
 
 /*
 Unfold
 ----------------------------- */
 %slide-rotateUnfoldLeft {
-	@include prefix(transform-origin, 100% 50%);
-	@include prefix(animation, rotateUnfoldLeft $transition-duration $transition-ease-method both);
+	@include slide-rotateUnfoldLeft($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateUnfoldRight {
-	@include prefix(transform-origin, 0% 50%);
-	@include prefix(animation, rotateUnfoldRight $transition-duration $transition-ease-method both);
+	@include slide-rotateUnfoldRight($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateUnfoldTop {
-	@include prefix(transform-origin, 50% 100%);
-	@include prefix(animation, rotateUnfoldTop $transition-duration $transition-ease-method both);
+	@include slide-rotateUnfoldTop($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateUnfoldBottom {
-	@include prefix(transform-origin, 50% 0%);
-	@include prefix(animation, rotateUnfoldBottom $transition-duration $transition-ease-method both);
+	@include slide-rotateUnfoldBottom($transition-duration, $transition-ease-method);
 }
 
 /* ---------------------------------------------------
@@ -312,43 +280,35 @@ Room Walls
 --------------------------------------------------- */
 
 %slide-rotateRoomLeftOut {
-	@include prefix(transform-origin, 100% 50%);
-	@include prefix(animation, rotateRoomLeftOut $transition-duration $transition-ease-method both);
+	@include slide-rotateRoomLeftOut($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateRoomLeftIn {
-	@include prefix(transform-origin, 0% 50%);
-	@include prefix(animation, rotateRoomLeftIn $transition-duration $transition-ease-method both);
+	@include slide-rotateRoomLeftIn($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateRoomRightOut {
-	@include prefix(transform-origin, 0% 50%);
-	@include prefix(animation, rotateRoomRigthtOut $transition-duration $transition-ease-method both);
+	@include slide-rotateRoomRightOut($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateRoomRightIn {
-	@include prefix(transform-origin, 100% 50%);
-	@include prefix(animation, rotateRoomRightIn $transition-duration $transition-ease-method both);
+	@include slide-rotateRoomRightIn($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateRoomTopOut {
-	@include prefix(transform-origin, 50% 100%);
-	@include prefix(animation, rotateRoomTopOut $transition-duration $transition-ease-method both);
+	@include slide-rotateRoomTopOut($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateRoomTopIn {
-	@include prefix(transform-origin, 50% 0%);
-	@include prefix(animation, rotateRoomTopIn $transition-duration $transition-ease-method both);
+	@include slide-rotateRoomTopIn($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateRoomBottomOut {
-	@include prefix(transform-origin, 50% 0%);
-	@include prefix(animation, rotateRoomBottomOut $transition-duration $transition-ease-method both);
+	@include slide-rotateRoomBottomOut($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateRoomBottomIn {
-	@include prefix(transform-origin, 50% 100%);
-	@include prefix(animation, rotateRoomBottomIn $transition-duration $transition-ease-method both);
+	@include slide-rotateRoomBottomIn($transition-duration, $transition-ease-method);
 }
 
 /* ---------------------------------------------------
@@ -356,43 +316,35 @@ Cube
 --------------------------------------------------- */
 
 %slide-rotateCubeLeftOut {
-	@include prefix(transform-origin, 100% 50%);
-	@include prefix(animation, rotateCubeLeftOut $transition-duration $transition-ease-method both);
+	@include slide-rotateCubeLeftOut($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateCubeLeftIn {
-	@include prefix(transform-origin, 0% 50%);
-	@include prefix(animation, rotateCubeLeftIn $transition-duration $transition-ease-method both);
+	@include slide-rotateCubeLeftIn($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateCubeRightOut {
-	@include prefix(transform-origin, 0% 50%);
-	@include prefix(animation, rotateCubeRightOut $transition-duration $transition-ease-method both);
+	@include slide-rotateCubeRightOut($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateCubeRightIn {
-	@include prefix(transform-origin, 100% 50%);
-	@include prefix(animation, rotateCubeRightIn $transition-duration $transition-ease-method both);
+	@include slide-rotateCubeRightIn($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateCubeTopOut {
-	@include prefix(transform-origin, 50% 100%);
-	@include prefix(animation, rotateCubeTopOut $transition-duration $transition-ease-method both);
+	@include slide-rotateCubeTopOut($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateCubeTopIn {
-	@include prefix(transform-origin, 50% 0%);
-	@include prefix(animation, rotateCubeTopIn $transition-duration $transition-ease-method both);
+	@include slide-rotateCubeTopIn($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateCubeBottomOut {
-	@include prefix(transform-origin, 50% 0%);
-	@include prefix(animation, rotateCubeBottomOut $transition-duration $transition-ease-method both);
+	@include slide-rotateCubeBottomOut($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateCubeBottomIn {
-	@include prefix(transform-origin, 50% 100%);
-	@include prefix(animation, rotateCubeBottomIn $transition-duration $transition-ease-method both);
+	@include slide-rotateCubeBottomIn($transition-duration, $transition-ease-method);
 }
 
 /* ---------------------------------------------------
@@ -400,43 +352,35 @@ Carousel
 --------------------------------------------------- */
 
 %slide-rotateCarouselLeftOut {
-	@include prefix(transform-origin, 100% 50%);
-	@include prefix(animation, rotateCarouselLeftOut $transition-duration $transition-ease-method both);
+	@include slide-rotateCarouselLeftOut($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateCarouselLeftIn {
-	@include prefix(transform-origin, 0% 50%);
-	@include prefix(animation, rotateCarouselLeftIn $transition-duration $transition-ease-method both);
+	@include slide-rotateCarouselLeftIn($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateCarouselRightOut {
-	@include prefix(transform-origin, 0% 50%);
-	@include prefix(animation, rotateCarouselRightOut $transition-duration $transition-ease-method both);
+	@include slide-rotateCarouselRightOut($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateCarouselRightIn {
-	@include prefix(transform-origin, 100% 50%);
-	@include prefix(animation, rotateCarouselRightIn $transition-duration $transition-ease-method both);
+	@include slide-rotateCarouselRightIn($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateCarouselTopOut {
-	@include prefix(transform-origin, 50% 100%);
-	@include prefix(animation, rotateCarouselTopOut $transition-duration $transition-ease-method both);
+	@include slide-rotateCarouselTopOut($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateCarouselTopIn {
-	@include prefix(transform-origin, 50% 0%);
-	@include prefix(animation, rotateCarouselTopIn $transition-duration $transition-ease-method both);
+	@include slide-rotateCarouselTopIn($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateCarouselBottomOut {
-	@include prefix(transform-origin, 50% 0%);
-	@include prefix(animation, rotateCarouselBottomOut $transition-duration $transition-ease-method both);
+	@include slide-rotateCarouselBottomOut($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateCarouselBottomIn {
-	@include prefix(transform-origin, 50% 100%);
-	@include prefix(animation, rotateCarouselBottomIn $transition-duration $transition-ease-method both);
+	@include slide-rotateCarouselBottomIn($transition-duration, $transition-ease-method);
 }
 
 /* ---------------------------------------------------
@@ -444,13 +388,11 @@ Sides
 --------------------------------------------------- */
 
 %slide-rotateSidesOut {
-	@include prefix(transform-origin, -50% 50%);
-	@include prefix(animation, rotateSidesOut $transition-duration $transition-ease-method both);
+	@include slide-rotateSidesOut($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateSidesIn {
-	@include prefix(transform-origin, 150% 50%);
-	@include prefix(animation, rotateSidesIn $transition-duration $transition-ease-method both);
+	@include slide-rotateSidesIn($transition-duration, $transition-ease-method);
 
 }
 
@@ -458,9 +400,9 @@ Sides
 Slides
 --------------------------------------------------- */
 %slide-rotateSlideOut {
-	@include prefix(animation, rotateSlideOut $transition-duration $transition-ease-method both);
+	@include slide-rotateSlideOut($transition-duration, $transition-ease-method);
 }
 
 %slide-rotateSlideIn {
-	@include prefix(animation, rotateSlideIn $transition-duration $transition-ease-method both);
+	@include slide-rotateSlideIn($transition-duration, $transition-ease-method);
 }

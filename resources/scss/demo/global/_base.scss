@@ -1,10 +1,20 @@
 /* ---------------------------------------------------
-Demo Styles
+Main Styles
 --------------------------------------------------- */
- body {
- 	color: #333;
- 	background: #eee;
- }
+html {
+	font-size: 62.5%;
+
+	height: 100%;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 140%;
+
+	color: #333;
+	background: rgba($color-lightBrown, 0.2);
+}
 
 h1,
 h2,
@@ -17,8 +27,8 @@ p,
 ul,
 li {
 	font-family: $font-family;
-	font-weight: normal;
-	line-height: 2.2rem;
+	font-weight: $font-normal;
+	line-height: 2.8rem;
 
 	margin-bottom: 1rem;
 
@@ -31,14 +41,10 @@ li {
 
 .container {
 	padding: 0 1em;
-	width: $max-width;
-	margin: 0 auto;
-	@include flex(1);
-	@include align-content(center);
 
+	@include outer-container;
 }
 
 .canvas {
 	border-top: 1px solid #fff;
 }
-

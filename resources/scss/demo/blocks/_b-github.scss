@@ -1,0 +1,15 @@
+.b-github {
+	@include media($mobile) {
+		display: none;
+	}
+	.github__link {
+		display: block;
+	}
+	.github__img {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		border: 0;
+	}
+}

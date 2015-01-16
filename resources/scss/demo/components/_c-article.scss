@@ -1,61 +1,58 @@
 .c-article {
 	h1 {
 		font-size: 2.8rem;
-		font-weight: bold;
+		font-weight: $font-xtrabold;
 		line-height: 3.9rem;
 
 		display: block;
 
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 
-		color: lighten($color-logo, 5);
+		color: $color-middleBlue;
 	}
 	h2 {
 		font-size: 2.3rem;
-		font-weight: bold;
+		font-weight: $font-xtrabold;
 		line-height: 3rem;
 
-		margin: 2rem 0;
+		margin: 1rem 0;
 
-		color: #333;
+		color: $color-lightBlue;
 	}
 	h3 {
 		font-size: 2rem;
-		font-weight: normal;
+		font-weight: $font-light;
 		line-height: 3rem;
 
-		margin: 3.5rem 0;
+		margin: 2.75rem 0;
 		padding-top: 2.75rem;
 
 		text-transform: uppercase;
 
-		color: #333;
-		border-top: 1px solid #fff;
-		clear: left;
+		color: darken($color-darkBrown, 20);
+		border-top: 1px solid $color-lightBrown;
 	}
 	h4 {
-		font-size: 1.6rem;
-		font-weight: normal;
-		line-height: 2.6rem;
+		font-size: 1.9rem;
+		font-weight: $font-light;
+		line-height: 2.5rem;
 
-		margin: 1.5rem 0;
-		padding: 0.5rem 0.5rem;
+		margin: 2rem 0;
+		padding: 0.5rem;
 
-		text-transform: uppercase;
-
-		color: #333;
+		color: #000;
 		background: #fff;
-		border-top: 1px solid #fff;
 	}
 	a {
 		text-decoration: none;
 
-		color: $color-logo;
-		background: lighten($color-logo, 65);
+		color: #fff;
+		background: lighten($color-lightBlue, 5);
 
+		@include transition(300ms ease all);
 		&:hover {
 			color: #eee;
-			background: $color-logo;
+			background: $color-darkBlue;
 		}
 	}
 	strong,
@@ -67,11 +64,14 @@
 	}
 	ul,
 	ol {
-		margin-left: 3rem;
+		margin-left: 6rem;
 		li {
-			line-height: 2rem;
+			line-height: 2.6rem;
 
-			margin: 0.5rem 0;
+			margin: 1rem 0;
+			a {
+				color: #fff;
+			}
 		}
 	}
 	ul {
@@ -83,4 +83,13 @@
 
 		list-style: decimal;
 	}
+	img {
+		display: block;
+
+		max-width: 100%;
+		height: auto;
+		margin: 1rem auto;
+	}
 }
+
+

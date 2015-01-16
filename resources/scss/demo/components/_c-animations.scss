@@ -1,0 +1,28 @@
+[data-css="c-animations"] {
+	width: 25%;
+	float: left;
+	padding: 5px;
+	@include prefix(box-sizing, border-box);
+
+	.animations__wrapper {
+		padding: 10px;
+		background: #fff;
+	}
+
+	.animations__headline {
+		font-family: $font-family;
+		text-align: center;
+		display: block;
+		font-size: 1.3rem;
+	}
+
+	.clearfix {
+		@extend %clearfix;
+	}
+}
+
+.animations-wrapper {
+	float: left;
+	clear: both;
+	display: block;
+}

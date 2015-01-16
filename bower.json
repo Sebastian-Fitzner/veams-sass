@@ -9,6 +9,7 @@
 		"resources/data",
 		"resources/js",
 		"resources/templates",
+		"resources/bower-components",
 		".bowerrc",
 		".gitignore",
 		"bower.json",
@@ -17,6 +18,8 @@
 		"README.md"
 	],
 	"devDependencies": {
+		"bourbon": "~3.1.8",
+		"neat": "~1.5.0"
 	},
 	"dependencies": {}
 }

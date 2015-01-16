@@ -1,19 +1,40 @@
 .b-logo {
 	width: auto;
-	padding: 2rem;
+	padding: 2.75rem 0 2rem;
 
 	text-align: center;
 
-	@include breakpoint($mobile) {
+	@include media($tablet) {
+		padding: 2rem;
+	}
+	@include media($mobile) {
 		text-align: right;
 	}
+	.logo__text {
+		display: block;
 
-	.logo__symbol {
-		&:hover {
+		background: url("../img/logo-text.svg") no-repeat 50% center;
+
+		@include media($mobile) {
+			background: none;
 		}
+	}
+	.logo__symbol {
+		text-align: center;
 		img {
+			display: inline;
+
 			width: 50px;
 			height: auto;
+
+			@include backface-visibility(visible);
+			@include perspective(10);
+			@include transform-style(preserve-3d);
+			@include transform(rotate3d(0, 0, 0, 0deg));
+			@include transition(transform 500ms ease-in-out);
+			&:hover {
+				@include transform(rotate3d(0, 1, 0, 180deg));
+			}
 		}
 	}
 }

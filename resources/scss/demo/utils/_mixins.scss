@@ -1,0 +1,7 @@
+@mixin addRotation($deg) {
+	margin-left: -($nav-width);
+	margin-right: -($nav-width);
+
+	@include prefix(transform-origin, left center);
+	@include prefix(transform, rotate($deg));
+}

@@ -1,7 +1,25 @@
 .r-stage {
+	position: relative;
+	z-index: -3;
+
 	display: block;
 
 	padding: 6rem 0;
 
-	background: lighten($color-logo, 5);
+	background: lighten($color-lightBlue, 15);
+
+	@include addRotation(-3deg);
+	.stage__rotate {
+		padding-top: 90px;
+		padding-right: $nav-width;
+		padding-left: $nav-width;
+
+		@include transform(rotate(3deg));
+		@include media($tablet) {
+			padding-top: 45px;
+		}
+		@include media($mobile) {
+			padding-top: 25px;
+		}
+	}
 }

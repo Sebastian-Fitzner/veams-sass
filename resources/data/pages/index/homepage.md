@@ -56,8 +56,3 @@ This file is imported in `_pg.scss`.
 ### Demo (WIP)
 
 In future releases I will provide some examples in this package.
-
-### Frontend Methodology
-
-We build pg-scss with the PG Frontend Methodology: 
-* http://www.prototype-generator.com/pg-methodology/pg-methodology-overview.html

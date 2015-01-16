@@ -1,22 +1,27 @@
 .r-sidebar {
-	width: 30%;
-	@include breakpoint($mobile) {
+	@include span-columns(4);
+	@include media($mobile) {
 		margin: 2rem 0;
 
-		width: 100%;
+		@include span-columns(4);
 	}
-
 	&.is-right {
 		float: right;
 
+		margin-top: -45px;
 		margin-right: 0;
-	}
 
+		@include media($mobile) {
+			margin-top: 0;
+		}
+	}
 	h2,
 	h3 {
 		font-family: $font-family;
 		font-size: 2rem;
 
 		margin-bottom: 1rem;
+
+		color: $color-lightBlue;
 	}
 }

@@ -1,2 +1,2 @@
 ### Latest Release
-* [![NPM](https://nodei.co/npm/generator-prototype.png?downloads=true&stars=true)](https://nodei.co/npm/generator-prototype/)
+* [![Bower version](https://badge.fury.io/bo/pg-scss.svg)](http://badge.fury.io/bo/pg-scss)

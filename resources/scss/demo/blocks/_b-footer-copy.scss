@@ -1,0 +1,14 @@
+.b-footer-copy {
+	color: lighten($color-logo, 40);
+	p {
+		font-size: 1.2rem;
+	}
+	a {
+		text-decoration: none;
+
+		color: $color-darkBlue;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

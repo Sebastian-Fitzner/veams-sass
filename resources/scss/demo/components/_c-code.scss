@@ -1,0 +1,80 @@
+pre {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+	font-family: $font-family;
+	font-size: 1.5rem;
+	font-weight: $font-light;
+	line-height: 2.4rem;
+
+	position: relative;
+
+	overflow-x: auto;
+	overflow-y: hidden;
+
+	margin: 1.5rem 0;
+
+	text-align: center;
+	letter-spacing: 1px;
+
+	background: #23241f;
+	code {
+		position: relative;
+
+		overflow-y: hidden;
+
+		text-align: left;
+
+		background: #23241f;
+
+		@include transition(all 500ms ease);
+	}
+}
+
+code {
+	p &,
+	li & {
+		font-style: italic;
+
+		margin-right: 3px;
+		margin-left: 1px;
+
+		color: lighten($color-logo, 20);
+		background: #fff;
+	}
+}
+
+.js-toggle {
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+
+	width: 43px;
+	height: 24px;
+	margin-left: -22px;
+
+	opacity: 0.5;
+	border: 0 none;
+	background-color: transparent;
+
+	@include grunticon(arrow--code);
+	@include transition(all 300ms ease);
+	&:hover {
+		opacity: 0.8;
+	}
+	&:focus {
+		outline: 0 none;
+	}
+	&.js-active {
+		@include transform(rotate(180deg));
+	}
+}
+
+.js-close {
+	overflow: hidden;
+
+	height: 230px;
+
+	@include transition(all 500ms ease);
+}

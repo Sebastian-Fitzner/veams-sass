@@ -1,0 +1,29 @@
+$fxs: moveToLeft moveToRight moveToTop moveToBottom moveFromLeftFade moveFromRightFade moveFromTopFade moveFromBottomFade flipOutRight flipOutLeft flipOutTop flipOutBottom rotateOutNewspaper rotatePushLeft rotatePushRight rotatePushTop rotatePushBottom rotateUnfoldLeft rotateUnfoldRight rotateUnfoldTop rotateUnfoldBottom rotateRoomLeftOut rotateRoomRightOut rotateRoomTopOut rotateRoomBottomOut rotateCubeLeftOut rotateCubeRightOut rotateCubeTopOut rotateCubeBottomOut rotateCarouselLeftOut rotateCarouselRightOut rotateCarouselTopOut rotateCarouselBottomOut rotateSidesOut rotateSlideOut moveFromLeft moveFromRight moveFromTop moveFromBottom moveToLeftFade moveToRightFade moveToTopFade moveToBottomFade scaleDown scaleUp scaleUpDown scaleDownUp scaleDownCenter scaleUpCenter rotateRightSideFirst rotateLeftSideFirst rotateTopSideFirst rotateBottomSideFirst flipInLeft flipInRight flipInBottom flipInTop rotateFall rotateInNewspaper rotatePullRight rotatePullLeft rotatePullTop rotatePullBottom rotateFoldRight rotateFoldLeft rotateFoldTop rotateFoldBottom rotateRoomLeftIn rotateRoomRightIn rotateRoomTopIn rotateRoomBottomIn rotateCubeLeftIn rotateCubeRightIn rotateCubeTopIn rotateCubeBottomIn rotateCarouselLeftIn rotateCarouselRightIn rotateCarouselTopIn rotateCarouselBottomIn rotateSidesIn rotateSlideIn;
+
+.animate {
+	@extend %float;
+	display: block;
+	position: relative;
+	height: 100px;
+
+	&:after {
+		@extend %pseudo;
+		width: 60px;
+		height: 60px;
+		bottom: 10px;
+		left: 50%;
+		margin-left: -30px;
+		background: $color-darkBrown;
+	}
+
+	@each $fx in $fxs {
+		&.slide-#{$fx} {
+			&:hover {
+				&:after {
+					@extend %slide-#{$fx};
+					z-index: 1;
+				}
+			}
+		}
+	}
+}

@@ -1,3 +1,6 @@
 .r-content {
-	width: 100%;
+	@include span-columns(8);
+	@include media($mobile) {
+		@include span-columns(4);
+	}
 }
