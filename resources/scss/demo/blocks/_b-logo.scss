@@ -1,30 +1,43 @@
 .b-logo {
 	width: auto;
-	padding: 2.75rem 0 2rem;
+	padding: .5rem 0;
+	display: table;
+	vertical-align: middle;
 
-	text-align: center;
+	text-align: left;
 
-	@include media($tablet) {
-		padding: 2rem;
-	}
+
 	@include media($mobile) {
-		text-align: right;
+		text-align: left;
+	}
+	a {
+		text-decoration: none;
 	}
 	.logo__text {
-		display: block;
+		font-family: $font-family;
+		padding-left: 2rem;
+		display: table-cell;
+		vertical-align: middle;
+		color: #fff;
+		font-weight: $font-light;
+		font-size: 2rem;
+		text-decoration: none;
+		letter-spacing: 1px;
 
-		background: url("../img/logo-text.svg") no-repeat 50% center;
+		// background: url("../img/logo-text.svg") no-repeat 50% center;
 
 		@include media($mobile) {
 			background: none;
 		}
 	}
 	.logo__symbol {
-		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
+
 		img {
 			display: inline;
 
-			width: 50px;
+			width: 40px;
 			height: auto;
 
 			@include backface-visibility(visible);

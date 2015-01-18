@@ -13,20 +13,18 @@
 	width: 100%;
 	height: 100%;
 
-	@include transform(translateX(0));
+	@include transform(translateX(0%));
 	@include transform(translate3d(0, 0, 0));
 	@include transition(300ms ease all);
 	@include backface-visibility(hidden);
 }
 
 .show-nav #site-canvas {
-	transform: translateX($nav-width);
-
-	@include transform(translateX($nav-width));
-	@include transform(translate3d($nav-width, 0, 0));
+	@include transform(translateX(-$nav-width));
+	@include transform(translate3d(-$nav-width, 0, 0));
 	@include media($mobile) {
-		@include transform(translateX($nav-mobile-width));
-		@include transform(translate3d($nav-mobile-width, 0, 0));
+		@include transform(translateX(-$nav-mobile-width));
+		@include transform(translate3d(-$nav-mobile-width, 0, 0));
 	}
 }
 
@@ -34,7 +32,7 @@
 	position: absolute;
 	z-index: 10;
 	top: 0;
-	left: -$nav-width;
+	right: -$nav-width;
 
 	overflow: hidden;
 
@@ -44,7 +42,7 @@
 	background: darken($color-lightBlue, 0.2);
 
 	@include media($mobile) {
-		left: -$nav-mobile-width;
+		right: -$nav-mobile-width;
 
 		width: $nav-mobile-width;
 	}

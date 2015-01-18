@@ -8,6 +8,9 @@ module.exports = {
 		partials: [
 		'<%= paths.src %>/templates/partials/**/*.hbs',
 		'<%= paths.src %>/templates/layouts/tpl-default.hbs'
+		],
+		collections: [
+			'type'
 		]
 	},
 	pages: {
@@ -17,7 +20,7 @@ module.exports = {
 			cwd: '<%= paths.src %>/templates/pages/',
 			dest: '<%= paths.dev %>/',
 			expand: true,
-			flatten: true,
+			flatten: false,
 			src: ['**/*.hbs']
 		}]
 	}

@@ -1,4 +1,10 @@
+PG-SCSS Kickstarter is a simple library to extend PG.
+
 ### Requirements
+
+In general there are no requirements. Just download the package and import the files you need. 
+
+If you want to install it with Bower, here are the requirements: 
 
 - NodeJS
 - Bower (npm install -g bower)
@@ -6,53 +12,57 @@
 ### Installation
 
 ``` bash
-bower i pg-scss --save
+bower install pg-scss --save
 ```
 
 ### How to use
 
-Just import the needed files into your project.
+Just import the files you need into your project.
 
 **Example:**
 
 ``` scss
-@import "pg-reset";
+@import "pg-reset"; // or "pg-normalize"
 @import "pg";
-@import "pg-animations";
+@import "pg-animations"; // optional, because it adds keyframes to your css
 ```
 
 ### Main Files
 
-#### `_pg-reset`
+#### `_pg-reset.scss`
 
-`_pg-global.scss` is a file which contains your resets, font-base size and settings: 
+`_pg-global.scss` contains your resets, font-base size and settings: 
 - _reset.scss
 - _font-base.scss
 - _settings.scss
 
-#### `_pg-normalize`
+#### `_pg-normalize.scss`
 
-`_pg-normalize.scss` is a file which contains your normalize.scss, font-base size and settings: 
+`_pg-normalize.scss` contains your normalize.scss, font-base size and settings: 
 - _normalize.scss
 - _font-base.scss
 - _settings.scss
 
-Just import one of these files at the beginning of your `scss` file.
+**Just import one of these files at the beginning of your `scss` file.**
 
-#### `_pg-helpers`
+#### `_pg-helpers.scss`
 
-`_pg-helpers.scss` is a file which contains helpers and layout mixins.
+`_pg-helpers.scss` contains helpers and layout mixins.
 
 This file is imported in `_pg.scss`.
 
-#### `_pg`
+#### `_pg.scss`
 
-`_pg.scss` is a file which contains all major helpers and mixins.
+`_pg.scss` contains all major helpers and mixins.
 
 #### `_pg-animations`
 
-`_pg-animations.scss` is a file which contains custom keyframes and animation sets. You have to import this file manually when you want to use it.
+`_pg-animations.scss` contains custom keyframes and animation sets. You have to import this file manually when you want to use it.
 
-### Demo (WIP)
+### Background
 
-In future releases I will provide some examples in this package.
+I really like [Bourbon](http://bourbon.io/), so you can see a few similarities, but not all of Bourbon is needed, other things are missing because they are too specific (e.g. spriteicon) or a few things have to be modified. 
+
+That's why I decided to create a simple and lightweight library which contains specific enhancements like animation sets or icon mixins. 
+ 
+In the end my personal favor is to use both libraries.

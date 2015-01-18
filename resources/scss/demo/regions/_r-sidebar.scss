@@ -1,5 +1,5 @@
 .r-sidebar {
-	@include span-columns(4);
+	@include span-columns(3);
 	@include media($mobile) {
 		margin: 2rem 0;
 
@@ -8,7 +8,6 @@
 	&.is-right {
 		float: right;
 
-		margin-top: -45px;
 		margin-right: 0;
 
 		@include media($mobile) {

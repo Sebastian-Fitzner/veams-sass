@@ -3,10 +3,11 @@ block: navbar
 ---
 
 <nav class="b-navbar" id="site-menu">
-	<h2>Getting Started with PG</h2>
+
+	<h2>General Overview</h2>
 	<ul class="nav navbar__list">
 		{{#withSort pages 'data.sortOrder'}}
-			{{#is data.section "Getting Started"}}
+			{{#is data.type "General Overview"}}
 				<li class="navbar__list-item">
 					<a href="{{autolink}}" {{#is ../../page.dest this.dest}} class="is-active"{{/is}}>{{data.menuLink}}</a>
 				</li>
@@ -14,10 +15,10 @@ block: navbar
 		{{/withSort}}
 	</ul>
 
-	<h2>PG Frontend Methodology</h2>
+	<h2>Effects</h2>
 	<ul class="nav navbar__list">
 		{{#withSort pages 'data.sortOrder'}}
-			{{#is data.section "Methodology"}}
+			{{#is data.type "Effects"}}
 				<li class="navbar__list-item">
 					<a href="{{autolink}}" {{#is ../../page.dest this.dest}} class="is-active"{{/is}}>{{data.menuLink}}</a>
 				</li>
@@ -25,14 +26,15 @@ block: navbar
 		{{/withSort}}
 	</ul>
 
-	<h2>Templating in PG</h2>
+	<h2>Helpers</h2>
 	<ul class="nav navbar__list">
 		{{#withSort pages 'data.sortOrder'}}
-			{{#is data.section "Templating"}}
+			{{#is data.type "Helpers"}}
 				<li class="navbar__list-item">
 					<a href="{{autolink}}" {{#is ../../page.dest this.dest}} class="is-active"{{/is}}>{{data.menuLink}}</a>
 				</li>
 			{{/is}}
 		{{/withSort}}
 	</ul>
+
 </nav>

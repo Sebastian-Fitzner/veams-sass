@@ -1,8 +1,6 @@
 pre {
 	clear: both;
 	display: block;
-	float: left;
-	width: 100%;
 	font-family: $font-family;
 	font-size: 1.5rem;
 	font-weight: $font-light;
@@ -18,7 +16,7 @@ pre {
 	text-align: center;
 	letter-spacing: 1px;
 
-	background: #23241f;
+	background: #FDF6E3;
 	code {
 		position: relative;
 
@@ -46,11 +44,12 @@ code {
 }
 
 .js-toggle {
+	background-size: contain;
 	position: absolute;
 	right: 5px;
 	bottom: 5px;
 
-	width: 43px;
+	width: 25px;
 	height: 24px;
 	margin-left: -22px;
 

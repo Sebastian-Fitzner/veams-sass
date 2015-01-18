@@ -1,5 +1,12 @@
 $arrows: left right top bottom;
 
+.arrows-wrapper {
+	float: left;
+	display: block;
+	width: 100%;
+	clear: both;
+}
+
 @each $arrow in $arrows {
 	.c-article a.arrow-#{$arrow} {
 		@include fx-arrow($color: #000, $colorHover: #999, $height: 30px, $direction: $arrow);
