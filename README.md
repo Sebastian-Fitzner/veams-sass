@@ -2,6 +2,8 @@
 
 PG-SCSS Kickstarter is a simple library to extend the Prototype-Generator (PG).
 
+Demo: http://scss.prototype-generator.com/
+
 ### Requirements
 
 In general there are no requirements. Just download the package and import the files you need. 
