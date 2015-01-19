@@ -1,8 +1,17 @@
 [data-css="c-animations"] {
+	@include prefix(box-sizing, border-box);
+
 	width: 25%;
 	float: left;
 	padding: 5px;
-	@include prefix(box-sizing, border-box);
+
+	@include media($tablet) {
+		width: 50%;
+	}
+
+	@include media($mobile-s) {
+		width: 100%;
+	}
 
 	.animations__wrapper {
 		padding: 10px;

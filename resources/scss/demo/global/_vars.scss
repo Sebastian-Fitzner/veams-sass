@@ -12,6 +12,7 @@ $nav-mobile-width: 270px;
 // Define your breakpoints
 $tablet: new-breakpoint(max-width 768px 8);
 $mobile: new-breakpoint(max-width 640px 4);
+$mobile-s: new-breakpoint(max-width 320px 4);
 
 // Colors
 $color-logo: #272727;

@@ -31,7 +31,7 @@ Just import the files you need into your project.
 
 #### `_pg-reset.scss`
 
-`_pg-global.scss` contains your resets, font-base size and settings: 
+`_pg-reset.scss` contains your resets, font-base size and settings: 
 - _reset.scss
 - _font-base.scss
 - _settings.scss
