@@ -21,7 +21,7 @@
 			&:after {
 				@include transform(rotate(-90deg) translateY(0));
 				@include media($mobile) {
-					@include transform(rotate(-90deg) translateY(-20px));
+					@include transform(rotate(-90deg) translateY(20px));
 				}
 			}
 		}

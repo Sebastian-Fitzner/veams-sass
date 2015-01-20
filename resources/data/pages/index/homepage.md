@@ -1,4 +1,4 @@
-PG-SCSS Kickstarter is a simple library to extend PG.
+PG-SCSS Starter Kit is a simple library to extend PG.
 
 ### Requirements
 

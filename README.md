@@ -1,6 +1,6 @@
-## PG-SCSS Kickstarter
+## PG-SCSS Starter Kit
 
-PG-SCSS Kickstarter is a simple library to extend the Prototype-Generator (PG).
+PG-SCSS Starter Kit is a simple library to extend the Prototype-Generator (PG).
 
 Demo: http://scss.prototype-generator.com/
 
