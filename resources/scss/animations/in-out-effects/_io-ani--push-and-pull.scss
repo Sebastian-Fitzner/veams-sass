@@ -1,0 +1,126 @@
+
+/* ---------------------------------------------------
+Push and Pull
+--------------------------------------------------- */
+
+/*
+Push
+----------------------------- */
+@mixin slide-rotatePushLeft($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotatePushLeft $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotatePushRight($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotatePushRight $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotatePushTop($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotatePushTop $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotatePushBottom($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotatePushBottom $transition-duration $transition-ease-method both);
+}
+
+/*
+Pull
+----------------------------- */
+@mixin slide-rotatePullRight($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotatePullRight $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotatePullLeft($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotatePullLeft $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotatePullTop($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotatePullTop $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotatePullBottom($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotatePullBottom $transition-duration $transition-ease-method both);
+}
+
+/* ---------------------------------------------------
+KEYFRAMES: PUSH AND PULL
+--------------------------------------------------- */
+
+/* ---------------------------------------------------
+Push
+--------------------------------------------------- */
+
+@include keyframes(rotatePushLeft) {
+	from {
+	}
+	to {
+		@include prefix(transform, rotateY(90deg));
+		opacity: 0;
+	}
+}
+
+@include keyframes(rotatePushRight) {
+	from {
+	}
+	to {
+		@include prefix(transform, rotateY(-90deg));
+		opacity: 0;
+	}
+}
+
+@include keyframes(rotatePushTop) {
+	from {
+	}
+	to {
+		@include prefix(transform, rotateX(-90deg));
+		opacity: 0;
+	}
+}
+
+@include keyframes(rotatePushBottom) {
+	from {
+	}
+	to {
+		@include prefix(transform, rotateX(90deg));
+		opacity: 0;
+	}
+}
+
+/* ---------------------------------------------------
+Pull
+--------------------------------------------------- */
+
+@include keyframes(rotatePullRight) {
+	from {
+		@include prefix(transform, rotateY(-90deg));
+		opacity: 0;
+	}
+}
+
+@include keyframes(rotatePullLeft) {
+	from {
+		@include prefix(transform, rotateY(90deg));
+		opacity: 0;
+	}
+}
+
+@include keyframes(rotatePullTop) {
+	from {
+		@include prefix(transform, rotateX(-90deg));
+		opacity: 0;
+	}
+}
+
+@include keyframes(rotatePullBottom) {
+	from {
+		@include prefix(transform, rotateX(90deg));
+		opacity: 0;
+	}
+}

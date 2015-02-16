@@ -1,0 +1,113 @@
+/* ---------------------------------------------------
+Carousel
+--------------------------------------------------- */
+
+@mixin slide-rotateCarouselLeftOut($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotateCarouselLeftOut $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotateCarouselLeftIn($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotateCarouselLeftIn $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotateCarouselRightOut($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotateCarouselRightOut $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotateCarouselRightIn($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotateCarouselRightIn $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotateCarouselTopOut($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotateCarouselTopOut $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotateCarouselTopIn($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotateCarouselTopIn $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotateCarouselBottomOut($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotateCarouselBottomOut $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotateCarouselBottomIn($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotateCarouselBottomIn $transition-duration $transition-ease-method both);
+}
+
+
+/* ---------------------------------------------------
+KEYFRAMES: CAROUSEL
+--------------------------------------------------- */
+
+@include keyframes(rotateCarouselLeftOut) {
+	0% {
+	}
+	100% {
+		@include prefix(transform, translateX(-200%) scale(.4) rotateY(-65deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCarouselLeftIn) {
+	0% {
+		@include prefix(transform, translateX(200%) scale(.4) rotateY(65deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCarouselRightOut) {
+	0% {
+	}
+	100% {
+		@include prefix(transform, translateX(200%) scale(.4) rotateY(65deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCarouselRightIn) {
+	0% {
+		@include prefix(transform, translateX(-200%) scale(.4) rotateY(-65deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCarouselTopOut) {
+	0% {
+	}
+	100% {
+		@include prefix(transform, translateY(-200%) scale(.4) rotateY(65deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCarouselTopIn) {
+	0% {
+		@include prefix(transform, translateY(200%) scale(.4) rotateY(-65deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCarouselBottomOut) {
+	0% {
+	}
+	100% {
+		@include prefix(transform, translateY(200%) scale(.4) rotateY(-65deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateCarouselBottomIn) {
+	0% {
+		opacity: .3;
+		-webkit-transform: translateY(-200%) scale(.4) rotateX(65deg);
+		transform: translateY(-200%) scale(.4) rotateX(65deg);
+	}
+}

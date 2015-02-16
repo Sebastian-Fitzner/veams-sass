@@ -1,0 +1,236 @@
+/* ---------------------------------------------------
+Move From To Fade
+--------------------------------------------------- */
+
+/*
+Move From To
+----------------------------- */
+@mixin slide-moveToLeft($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, moveToLeft $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-moveFromLeft($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, moveFromLeft $transition-duration $transition-ease-method both);
+
+}
+
+@mixin slide-moveToRight($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, moveToRight $transition-duration $transition-ease-method both);
+
+}
+
+@mixin slide-moveFromRight($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, moveFromRight $transition-duration $transition-ease-method both);
+
+}
+
+@mixin slide-moveToTop($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, moveToTop $transition-duration $transition-ease-method both);
+
+}
+
+@mixin slide-moveFromTop($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, moveFromTop $transition-duration $transition-ease-method both);
+
+}
+
+@mixin slide-moveToBottom($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, moveToBottom $transition-duration $transition-ease-method both);
+
+}
+
+@mixin slide-moveFromBottom($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, moveFromBottom $transition-duration $transition-ease-method both);
+}
+
+/*
+Fade
+----------------------------- */
+@mixin slide-fade($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, fade $transition-duration $transition-ease-method both);
+}
+
+/*
+Move From To and Fade
+----------------------------- */
+@mixin slide-moveToLeftFade($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, moveToLeftFade $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-moveFromLeftFade($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, moveFromLeftFade $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-moveToRightFade($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, moveToRightFade $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-moveFromRightFade($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, moveFromRightFade $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-moveToTopFade($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, moveToTopFade $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-moveFromTopFade($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, moveFromTopFade $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-moveToBottomFade($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, moveToBottomFade $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-moveFromBottomFade($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, moveFromBottomFade $transition-duration $transition-ease-method both);
+}
+
+/* ---------------------------------------------------
+Keyframes: MOVE FROM TO AND FADE
+--------------------------------------------------- */
+
+@include keyframes(moveToLeft) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateX(-100%));
+		@include prefix(transform, translate3d(-100%, 0, 0));
+	}
+}
+
+@include keyframes(moveFromLeft) {
+	from {
+		@include prefix(transform, translateX(-100%));
+		@include prefix(transform, translate3d(-100%, 0, 0));
+	}
+}
+
+@include keyframes(moveToRight) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateX(100%));
+		@include prefix(transform, translate3d(100%, 0, 0));
+	}
+}
+
+@include keyframes(moveFromRight) {
+	from {
+		@include prefix(transform, translateX(100%));
+		@include prefix(transform, translate3d(100%, 0, 0));
+	}
+}
+
+@include keyframes(moveToTop) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateY(-100%));
+		@include prefix(transform, translate3d(0, -100%, 0));
+	}
+}
+
+@include keyframes(moveFromTop) {
+	from {
+		@include prefix(transform, translateY(-100%));
+		@include prefix(transform, translate3d(0, -100%, 0));
+	}
+}
+
+@include keyframes(moveToBottom) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateY(100%));
+		@include prefix(transform, translate3d(0, 100%, 0));
+	}
+}
+
+@include keyframes(moveFromBottom) {
+	from {
+		@include prefix(transform, translateY(100%));
+		@include prefix(transform, translate3d(0, 100%, 0));
+	}
+}
+
+/* fade */
+@include keyframes(fade) {
+	from {
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+/* move from / to and fade */
+@include keyframes(moveToLeftFade) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateX(-100%));
+		@include prefix(transform, translate3d(-100%, 0, 0));
+		opacity: 0;
+	}
+}
+
+@include keyframes(moveFromLeftFade) {
+	from {
+		@include prefix(transform, translateX(-100%));
+		@include prefix(transform, translate3d(-100%, 0, 0));
+		opacity: 0;
+	}
+}
+
+@include keyframes(moveToRightFade) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateX(100%));
+		@include prefix(transform, translate3d(100%, 0, 0));
+		opacity: 0;
+	}
+}
+
+@include keyframes(moveFromRightFade) {
+	from {
+		@include prefix(transform, translateX(100%));
+		@include prefix(transform, translate3d(100%, 0, 0));
+		opacity: 0;
+	}
+}
+
+@include keyframes(moveToTopFade) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateY(-100%));
+		@include prefix(transform, translate3d(0, -100%, 0));
+		opacity: 0;
+	}
+}
+
+@include keyframes(moveFromTopFade) {
+	from {
+		@include prefix(transform, translateY(-100%));
+		@include prefix(transform, translate3d(0, -100%, 0));
+		opacity: 0;
+	}
+}
+
+@include keyframes(moveToBottomFade) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateY(100%));
+		@include prefix(transform, translate3d(0, 100%, 0));
+		opacity: 0;
+	}
+}
+
+@include keyframes(moveFromBottomFade) {
+	from {
+		@include prefix(transform, translateY(100%));
+		@include prefix(transform, translate3d(0, 100%, 0));
+		opacity: 0;
+	}
+}

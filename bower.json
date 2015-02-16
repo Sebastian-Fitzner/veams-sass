@@ -1,6 +1,6 @@
 {
 	"name": "pg-scss",
-	"version": "0.1.6",
+	"version": "0.2.0",
 	"ignore": [
 		"_dist",
 		"_output",

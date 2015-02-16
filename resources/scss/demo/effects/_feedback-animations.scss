@@ -1,0 +1,60 @@
+$fb-fxs: circleSimple, borderSimple, circleDelay, circleBig, circleRevert, circleShrink, borderMultiple;
+
+@each $fx in $fb-fxs {
+	.animate-fb-#{$fx} {
+		margin: 1em 0;
+		@include fb-ani-setup();
+		@extend %fb-ani-#{$fx};
+	}
+}
+
+.animate-fb-borderSimpleEdge {
+	@include fb-ani-setup($size: 75px, $radius: 0);
+	@include fb-ani-borderSimple();
+
+	margin: 1em 0;
+}
+.animate-fb-borderMultipleSmall {
+	@include fb-ani-setup($size: 35px);
+	@include fb-ani-borderMultiple($shadow: 0 0 0 10px rgba(255, 121, 0, 0.50));
+
+	margin: 1em 0;
+	&::before {
+		@include fb-ani-setupPseudo($width: 35px, $height: 35px);
+	}
+}
+
+.animate-fb-circleSimpleEdge {
+	@include fb-ani-setup($size: 70px, $radius: 0);
+	@include fb-ani-circleSimple($bgColor: rgba(0, 255, 160, 0.50));
+
+	margin: 1em 0;
+}
+
+.animate-fb-circleDelaySmall {
+	@include fb-ani-setup($size: 50px 70px, $radius: 0);
+	@include fb-ani-circleDelay($bgColor: rgba(255, 124, 244, 0.50));
+
+	margin: 1em 0;
+}
+
+.animate-fb-circleBigRounded {
+	@include fb-ani-setup($size: 50px 70px);
+	@include fb-ani-circleBig();
+
+	margin: 1em 0;
+}
+
+.animate-fb-circleRevertRounded {
+	@include fb-ani-setup($size: 70px 40px);
+	@include fb-ani-circleRevert();
+
+	margin: 1em 0;
+}
+
+.animate-fb-circleShrinkEdge {
+	@include fb-ani-setup($size: 50px, $radius: 0);
+	@include fb-ani-circleShrink();
+
+	margin: 1em 0;
+}

@@ -1,0 +1,83 @@
+
+/* ---------------------------------------------------
+Rotate First and Scale
+--------------------------------------------------- */
+
+@mixin slide-rotateRightSideFirst($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotateRightSideFirst $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotateLeftSideFirst($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotateLeftSideFirst $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotateTopSideFirst($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotateTopSideFirst $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotateBottomSideFirst($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotateBottomSideFirst $transition-duration $transition-ease-method both);
+}
+
+/* ---------------------------------------------------
+KEYFRAMES: ROTATE SIDES AND SCALE
+--------------------------------------------------- */
+@include keyframes(rotateRightSideFirst) {
+	0% {
+	}
+	40% {
+		opacity: .8;
+		@include prefix(transform, rotateY(15deg));
+		@include prefix(animation-timing-function, ease-out);
+	}
+	100% {
+		opacity: 0;
+		@include prefix(transform, scale(0.8) translateZ(-200px));
+	}
+}
+
+@include keyframes(rotateLeftSideFirst) {
+	0% {
+	}
+	40% {
+		opacity: .8;
+		@include prefix(transform, rotateY(-15deg));
+		@include prefix(animation-timing-function, ease-out);
+	}
+	100% {
+		opacity: 0;
+		@include prefix(transform, scale(0.8) translateZ(-200px));
+	}
+}
+
+@include keyframes(rotateTopSideFirst) {
+	0% {
+	}
+	40% {
+		opacity: .8;
+		@include prefix(transform, rotateX(-15deg));
+		@include prefix(animation-timing-function, ease-out);
+	}
+	100% {
+		opacity: 0;
+		@include prefix(transform, scale(0.8) translateZ(-200px));
+	}
+}
+
+@include keyframes(rotateBottomSideFirst) {
+	0% {
+	}
+	40% {
+		opacity: .8;
+		@include prefix(transform, rotateX(-15deg));
+		@include prefix(animation-timing-function, ease-out);
+	}
+	100% {
+		opacity: 0;
+		@include prefix(transform, scale(0.8) translateZ(-200px));
+	}
+}

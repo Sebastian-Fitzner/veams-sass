@@ -1,0 +1,28 @@
+{
+	"data": [
+		{
+			"article-class": false,
+			"article-header": true,
+			"article-h1": "Feedback-Animation Examples",
+			"article-md": "resources/data/pages/effects/animations/page__feedback-animations.md",
+			"animations-fb": [
+				"borderSimple",
+				"borderMultiple",
+				"circleSimple",
+				"circleDelay",
+				"circleBig",
+				"circleRevert",
+				"circleShrink"
+			],
+			"animations-fb-custom": [
+				"borderSimpleEdge",
+				"borderMultipleSmall",
+				"circleSimpleEdge",
+				"circleDelaySmall",
+				"circleBigRounded",
+				"circleRevertRounded",
+				"circleShrinkEdge"
+			]
+		}
+	]
+}

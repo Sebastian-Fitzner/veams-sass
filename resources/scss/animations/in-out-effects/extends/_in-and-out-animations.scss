@@ -1,0 +1,408 @@
+/* ===================================================
+ANIMATION SETS
+=================================================== */
+
+/* ---------------------------------------------------
+Move From To Fade
+--------------------------------------------------- */
+
+/*
+Move From To
+----------------------------- */
+%slide-moveToLeft {
+	@include slide-moveToLeft();
+}
+
+%slide-moveFromLeft {
+	@include slide-moveFromLeft();
+
+}
+
+%slide-moveToRight {
+	@include slide-moveToRight();
+
+}
+
+%slide-moveFromRight {
+	@include slide-moveFromRight();
+
+}
+
+%slide-moveToTop {
+	@include slide-moveToTop();
+
+}
+
+%slide-moveFromTop {
+	@include slide-moveFromTop();
+
+}
+
+%slide-moveToBottom {
+	@include slide-moveToBottom();
+
+}
+
+%slide-moveFromBottom {
+	@include slide-moveFromBottom();
+}
+
+/*
+Fade
+----------------------------- */
+%slide-fade {
+	@include slide-fade();
+}
+
+/*
+Move From To and Fade
+----------------------------- */
+%slide-moveToLeftFade {
+	@include slide-moveToLeftFade();
+}
+
+%slide-moveFromLeftFade {
+	@include slide-moveFromLeftFade();
+}
+
+%slide-moveToRightFade {
+	@include slide-moveToRightFade();
+}
+
+%slide-moveFromRightFade {
+	@include slide-moveFromRightFade();
+}
+
+%slide-moveToTopFade {
+	@include slide-moveToTopFade();
+}
+
+%slide-moveFromTopFade {
+	@include slide-moveFromTopFade();
+}
+
+%slide-moveToBottomFade {
+	@include slide-moveToBottomFade();
+}
+
+%slide-moveFromBottomFade {
+	@include slide-moveFromBottomFade();
+}
+
+/* ---------------------------------------------------
+Scale and Fade
+--------------------------------------------------- */
+
+%slide-scaleDown {
+	@include slide-scaleDown();
+}
+
+%slide-scaleUp {
+	@include slide-scaleUp();
+}
+
+%slide-scaleUpDown {
+	@include slide-scaleUpDown();
+}
+
+%slide-scaleDownUp {
+	@include slide-scaleDownUp();
+}
+
+%slide-scaleDownCenter {
+	@include slide-scaleDownCenter();
+}
+
+%slide-scaleUpCenter {
+	@include slide-scaleUpCenter();
+}
+
+/* ---------------------------------------------------
+Rotate First and Scale
+--------------------------------------------------- */
+
+%slide-rotateRightSideFirst {
+	@include slide-rotateRightSideFirst();
+}
+
+%slide-rotateLeftSideFirst {
+	@include slide-rotateLeftSideFirst();
+}
+
+%slide-rotateTopSideFirst {
+	@include slide-rotateTopSideFirst();
+}
+
+%slide-rotateBottomSideFirst {
+	@include slide-rotateBottomSideFirst();
+}
+
+/* ---------------------------------------------------
+Flip
+--------------------------------------------------- */
+
+%slide-flipOutRight {
+	@include slide-flipOutRight($transition-duration, ease-in);
+}
+
+%slide-flipInLeft {
+	@include slide-flipInLeft($transition-duration, ease-out);
+}
+
+%slide-flipOutLeft {
+	@include slide-flipOutLeft($transition-duration, ease-in);
+}
+
+%slide-flipInRight {
+	@include slide-flipInRight($transition-duration, ease-out);
+}
+
+%slide-flipOutTop {
+	@include slide-flipOutTop($transition-duration, ease-in);
+}
+
+%slide-flipInBottom {
+	@include slide-flipInBottom($transition-duration, ease-out);
+}
+
+%slide-flipOutBottom {
+	@include slide-flipOutBottom($transition-duration, ease-in);
+}
+
+%slide-flipInTop {
+	@include slide-flipInTop($transition-duration, ease-out);
+}
+
+/* ---------------------------------------------------
+Rotate Fall
+--------------------------------------------------- */
+%slide-rotateFall {
+	@include slide-rotateFall($transition-duration, ease-in);
+}
+
+/* ---------------------------------------------------
+Rotate Newspaper
+--------------------------------------------------- */
+%slide-rotateOutNewspaper {
+	@include slide-rotateOutNewspaper($transition-duration, ease-in);
+}
+
+%slide-rotateInNewspaper {
+	@include slide-rotateInNewspaper($transition-duration, ease-out);
+}
+
+/* ---------------------------------------------------
+Push and Pull
+--------------------------------------------------- */
+
+/*
+Push
+----------------------------- */
+%slide-rotatePushLeft {
+	@include slide-rotatePushLeft();
+}
+
+%slide-rotatePushRight {
+	@include slide-rotatePushRight();
+}
+
+%slide-rotatePushTop {
+	@include slide-rotatePushTop();
+}
+
+%slide-rotatePushBottom {
+	@include slide-rotatePushBottom();
+}
+
+/*
+Pull
+----------------------------- */
+%slide-rotatePullRight {
+	@include slide-rotatePullRight();
+}
+
+%slide-rotatePullLeft {
+	@include slide-rotatePullLeft();
+}
+
+%slide-rotatePullTop {
+	@include slide-rotatePullTop();
+}
+
+%slide-rotatePullBottom {
+	@include slide-rotatePullBottom();
+}
+
+/* ---------------------------------------------------
+Fold and Unfold
+--------------------------------------------------- */
+
+/*
+Fold
+----------------------------- */
+%slide-rotateFoldRight {
+	@include slide-rotateFoldRight();
+}
+
+%slide-rotateFoldLeft {
+	@include slide-rotateFoldLeft();
+}
+
+%slide-rotateFoldTop {
+	@include slide-rotateFoldTop();
+}
+
+%slide-rotateFoldBottom {
+	@include slide-rotateFoldBottom();
+}
+
+/*
+Unfold
+----------------------------- */
+%slide-rotateUnfoldLeft {
+	@include slide-rotateUnfoldLeft();
+}
+
+%slide-rotateUnfoldRight {
+	@include slide-rotateUnfoldRight();
+}
+
+%slide-rotateUnfoldTop {
+	@include slide-rotateUnfoldTop();
+}
+
+%slide-rotateUnfoldBottom {
+	@include slide-rotateUnfoldBottom();
+}
+
+/* ---------------------------------------------------
+Room Walls
+--------------------------------------------------- */
+
+%slide-rotateRoomLeftOut {
+	@include slide-rotateRoomLeftOut();
+}
+
+%slide-rotateRoomLeftIn {
+	@include slide-rotateRoomLeftIn();
+}
+
+%slide-rotateRoomRightOut {
+	@include slide-rotateRoomRightOut();
+}
+
+%slide-rotateRoomRightIn {
+	@include slide-rotateRoomRightIn();
+}
+
+%slide-rotateRoomTopOut {
+	@include slide-rotateRoomTopOut();
+}
+
+%slide-rotateRoomTopIn {
+	@include slide-rotateRoomTopIn();
+}
+
+%slide-rotateRoomBottomOut {
+	@include slide-rotateRoomBottomOut();
+}
+
+%slide-rotateRoomBottomIn {
+	@include slide-rotateRoomBottomIn();
+}
+
+/* ---------------------------------------------------
+Cube
+--------------------------------------------------- */
+
+%slide-rotateCubeLeftOut {
+	@include slide-rotateCubeLeftOut();
+}
+
+%slide-rotateCubeLeftIn {
+	@include slide-rotateCubeLeftIn();
+}
+
+%slide-rotateCubeRightOut {
+	@include slide-rotateCubeRightOut();
+}
+
+%slide-rotateCubeRightIn {
+	@include slide-rotateCubeRightIn();
+}
+
+%slide-rotateCubeTopOut {
+	@include slide-rotateCubeTopOut();
+}
+
+%slide-rotateCubeTopIn {
+	@include slide-rotateCubeTopIn();
+}
+
+%slide-rotateCubeBottomOut {
+	@include slide-rotateCubeBottomOut();
+}
+
+%slide-rotateCubeBottomIn {
+	@include slide-rotateCubeBottomIn();
+}
+
+/* ---------------------------------------------------
+Carousel
+--------------------------------------------------- */
+
+%slide-rotateCarouselLeftOut {
+	@include slide-rotateCarouselLeftOut();
+}
+
+%slide-rotateCarouselLeftIn {
+	@include slide-rotateCarouselLeftIn();
+}
+
+%slide-rotateCarouselRightOut {
+	@include slide-rotateCarouselRightOut();
+}
+
+%slide-rotateCarouselRightIn {
+	@include slide-rotateCarouselRightIn();
+}
+
+%slide-rotateCarouselTopOut {
+	@include slide-rotateCarouselTopOut();
+}
+
+%slide-rotateCarouselTopIn {
+	@include slide-rotateCarouselTopIn();
+}
+
+%slide-rotateCarouselBottomOut {
+	@include slide-rotateCarouselBottomOut();
+}
+
+%slide-rotateCarouselBottomIn {
+	@include slide-rotateCarouselBottomIn();
+}
+
+/* ---------------------------------------------------
+Sides
+--------------------------------------------------- */
+
+%slide-rotateSidesOut {
+	@include slide-rotateSidesOut();
+}
+
+%slide-rotateSidesIn {
+	@include slide-rotateSidesIn();
+
+}
+
+/* ---------------------------------------------------
+Slides
+--------------------------------------------------- */
+%slide-rotateSlideOut {
+	@include slide-rotateSlideOut();
+}
+
+%slide-rotateSlideIn {
+	@include slide-rotateSlideIn();
+}

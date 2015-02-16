@@ -1,0 +1,78 @@
+/* ---------------------------------------------------
+Scale and Fade
+--------------------------------------------------- */
+
+@mixin slide-scaleDown($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, scaleDown $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-scaleUp($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, scaleUp $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-scaleUpDown($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, scaleUpDown $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-scaleDownUp($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, scaleDownUp $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-scaleDownCenter($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, scaleDownCenter $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-scaleUpCenter($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(animation, scaleUpCenter $transition-duration $transition-ease-method both);
+}
+
+/* ---------------------------------------------------
+KEYFRAMES: SCALE AND FADE
+--------------------------------------------------- */
+
+@include keyframes(scaleDown) {
+	from {
+	}
+	to {
+		opacity: 0;
+		@include prefix(transform, scale(.8));
+	}
+}
+
+@include keyframes(scaleUp) {
+	from {
+		opacity: 0;
+		@include prefix(transform, scale(.8));
+	}
+}
+
+@include keyframes(scaleUpDown) {
+	from {
+		opacity: 0;
+		@include prefix(transform, scale(.8));
+	}
+}
+
+@include keyframes(scaleDownUp) {
+	from {
+	}
+	to {
+		opacity: 0;
+		@include prefix(transform, scale(.8));
+	}
+}
+
+@include keyframes(scaleDownCenter) {
+	from {
+	}
+	to {
+		@include prefix(transform, scale(.7));
+	}
+}
+
+@include keyframes(scaleUpCenter) {
+	from {
+		opacity: 0;
+		@include prefix(transform, scale(.7));
+	}
+}

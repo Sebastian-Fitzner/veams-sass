@@ -33,6 +33,8 @@ Just import the files you need into your project.
 
 ### Main Files
 
+**To start of just import either `_pg-reset` or `_pg-normalize` at the beginning of your `scss` file.**
+
 #### `_pg-reset.scss`
 
 `_pg-reset.scss` contains your resets, font-base size and settings: 
@@ -46,8 +48,6 @@ Just import the files you need into your project.
 - _normalize.scss
 - _font-base.scss
 - _settings.scss
-
-**Just import one of these files at the beginning of your `scss` file.**
 
 #### `_pg-helpers.scss`
 

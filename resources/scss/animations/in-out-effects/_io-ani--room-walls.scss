@@ -1,0 +1,109 @@
+/* ---------------------------------------------------
+Room Walls
+--------------------------------------------------- */
+@mixin slide-rotateRoomLeftOut($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotateRoomLeftOut $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotateRoomLeftIn($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotateRoomLeftIn $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotateRoomRightOut($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotateRoomRigthtOut $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotateRoomRightIn($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 100% 50%);
+	@include prefix(animation, rotateRoomRightIn $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotateRoomTopOut($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotateRoomTopOut $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotateRoomTopIn($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotateRoomTopIn $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotateRoomBottomOut($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 50% 0%);
+	@include prefix(animation, rotateRoomBottomOut $transition-duration $transition-ease-method both);
+}
+
+@mixin slide-rotateRoomBottomIn($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 50% 100%);
+	@include prefix(animation, rotateRoomBottomIn $transition-duration $transition-ease-method both);
+}
+
+/* ---------------------------------------------------
+KEYFRAMES: ROOM WALLS
+--------------------------------------------------- */
+@include keyframes(rotateRoomLeftOut) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateX(-100%) rotateY(90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateRoomLeftIn) {
+	from {
+		@include prefix(transform, translateX(100%) rotateY(-90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateRoomRightOut) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateX(100%) rotateY(-90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateRoomRightIn) {
+	from {
+		@include prefix(transform, translateX(-100%) rotateY(90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateRoomTopOut) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateY(-100%) rotateX(-90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateRoomTopIn) {
+	from {
+		@include prefix(transform, translateY(100%) rotateX(90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateRoomBottomOut) {
+	from {
+	}
+	to {
+		@include prefix(transform, translateY(100%) rotateX(90deg));
+		opacity: .3;
+	}
+}
+
+@include keyframes(rotateRoomBottomIn) {
+	from {
+		@include prefix(transform, translateY(-100%) rotateX(-90deg));
+		opacity: .3;
+	}
+}
