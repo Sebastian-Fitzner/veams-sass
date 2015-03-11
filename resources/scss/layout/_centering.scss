@@ -6,7 +6,9 @@ CENTERING MIXIN
 Use this mixin to center your elements with translate
 --------------------------------------------------- */
 
-@mixin centering($scope) {
+@mixin centering($scope, $pos: absolute) {
+	position: $pos;
+
 	@if $scope == "v" {
 		top: 50%;
 		@include prefix('transform', translateY(-50%));
