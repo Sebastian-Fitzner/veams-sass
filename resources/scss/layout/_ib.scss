@@ -1,0 +1,31 @@
+/* ===================================================
+Inline Block Layouts
+=================================================== */
+
+/* ---------------------------------------------------
+Mixin
+--------------------------------------------------- */
+@mixin ib-parent() {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	word-spacing: -1em;
+}
+
+@mixin ib-child() {
+	display: inline-block;
+	float: none;
+	vertical-align: top;
+	word-spacing: 0;
+}
+
+/* ---------------------------------------------------
+Extend
+--------------------------------------------------- */
+%ib-parent {
+	@include ib-parent();
+}
+
+%ib-child {
+	@include ib-child();
+}
