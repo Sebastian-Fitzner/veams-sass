@@ -93,6 +93,7 @@ module.exports = {
 				// here you can build your _all.scss like you would do in _all.scss with sass-globbing
 				src: [
 					'_pg-helpers.scss',
+					'browser-resets/**/*.scss',
 					'effects/**/*.scss',
 					'css3/**/*.scss',
 					'general-extends/**/*.scss'
