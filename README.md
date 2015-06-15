@@ -65,9 +65,9 @@ This file is imported in `_pg.scss`.
 
 ### Background
 
-I really like [Bourbon](http://bourbon.io/), so you can see a few similarities, but not all of Bourbon is needed, other things are missing because they are too specific (e.g. spriteicon) or a few things have to be modified. 
+I really like [Bourbon](http://bourbon.io/), so you can see a few similarities, but not all of Bourbon is needed, other things are missing because they are too specific or a few things have to be modified. 
 
-That's why I decided to create a simple and lightweight library which contains specific enhancements like animation sets or icon mixins. 
+That's why I decided to create a simple and lightweight library which contains specific enhancements like animation sets or icon mixins.
  
 In the end my personal favor is to use both libraries.
 
