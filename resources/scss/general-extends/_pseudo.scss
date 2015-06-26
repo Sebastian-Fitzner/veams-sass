@@ -3,7 +3,5 @@ PSEUDO
 =================================================== */
 
 %pseudo {
-	content: '';
-	display: block;
-	position: absolute;
+	@include pseudo();
 }

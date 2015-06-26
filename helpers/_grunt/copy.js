@@ -5,5 +5,4 @@ module.exports = {
 		expand: true,
 		src: ['**']
 	}
-	
 };

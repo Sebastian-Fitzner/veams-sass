@@ -1,0 +1,11 @@
+{
+	"data": [
+		{
+			"articleClass": false,
+			"articleHeader": {
+				"articleH1": "General Instructions"
+			},
+			"articleMd": "resources/templates/data/pages/index/homepage.md"
+		}
+	]
+}

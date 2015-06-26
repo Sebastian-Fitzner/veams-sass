@@ -1,6 +1,6 @@
 /*
- * Generated on 2015-01-05
- * generator-prototype v0.4.73
+ * Generated on 2015-06-15
+ * generator-prototype v1.0.0
  * http://prototype-generator.com/
  *
  * Copyright (c) 2015 Sebastian Fitzner
@@ -15,48 +15,22 @@
  * 1. For performance reasons you should only matching one level down, if possible. 
  * 2. Try to keep your watch task clean. Do NOT watch everything (like icons).
  * 3. Add "spawn: false" to your watch task when you need to speed up your build.
- * 4. When your project is a really huge one, you should consider to add broccoli.js to outsource some tasks (like scss compiling). 
  *
  */
+
+var config = require('./helpers/config');
 
 module.exports = function(grunt) {
 	
 	// load only used tasks and add fallbacks for those which cannot be find
-	require('jit-grunt')(grunt, { 
-		cmq: 'grunt-combine-media-queries',
-		replace: 'grunt-text-replace',
-		'svg-sprites': 'grunt-dr-svg-sprites'
+	require('jit-grunt')(grunt, {
+		'replace': 'grunt-text-replace'
 	});
 	// measures the time each task takes
 	require('time-grunt')(grunt);
 
-	var options = {
-	// Project settings
-		config: {
-			// in this directory you can find your grunt config tasks
-			src: "helpers/_grunt/*.js"
-		},
-		// define your path structure
-		paths: {
-			// helpers folder with grunt tasks and styleguide templates, tests and photobox
-			helper: 'helpers',
-			// resources folder with working files
-			src: 'resources',
-			// dist folder
-			dist: '_dist', 
-			// dev/working folder
-			dev: '_output'
-		},
-	// define your ports for grunt-contrib-connect
-		ports: {
-			app: 3000,
-			test: 3001,
-			livereload: 35731
-		}
-	};
-
 	// Load grunt configurations automatically
-	var configs = require('load-grunt-configs')(grunt, options);
+	var configs = require('load-grunt-configs')(grunt, config.options);
 
 	// Define the configuration for all the tasks
 	grunt.initConfig(configs);
@@ -71,24 +45,18 @@ module.exports = function(grunt) {
 		'sass:dist'
 	]); 
 	
-	// Icons Task
-	grunt.registerTask('icons', [
-		'grunticon',
-		'clean:grunticon',
-		'replace'
-	]); 
-	
 	// Sprites Task
 	grunt.registerTask('icons', [
-		'svg-sprites',
-		'replace:spriteUrl',
-		'replace:spriteCleaner'
+		'dr-svg-sprites',
+		'replace:spriteUrl'
 	]); 
 	
-	// Sync JS Task
-	grunt.registerTask('syncJS', [
-		'sync:js'
-	]);
+	// JS Task
+	grunt.registerTask('js', [
+		'browserify:vendor',
+		'browserify:dev'
+	]); 
+	
 	
 	// Build HTML Task
 	grunt.registerTask('build-html', [
@@ -109,28 +77,31 @@ module.exports = function(grunt) {
 	]);
 
 	/*
-	 *	ADVANCED TASKS
+	 *	ADVANCED TASKS	
 	 */
 	grunt.registerTask('server', [
 		'newer:assemble',
 		'concurrent:syncing',
 		'watchCSS',
-		// 'connect:livereload',
-		'browserSync', 
+		'connect:livereload',
+		// 'browserSync',
 		'watch'
 	]);
 	
 	grunt.registerTask('build', [
 		'clean:dev',
 		'jsbeautifier',
+		'browserify:vendor',
+		'browserify:dist',
+		'uglify',
 		'concurrent:syncing',  
 		'watchCSS',
-		'cmq',
-		'dataSeparator',
+		'sass:universal',
+		'combine_mq',
+		'autoprefixer',
 		'cssmin',
-		'concurrent:build',
-		'check-js',
-		'check-html'
+        'assemble',
+		'concurrent:build'
 	]);
 
 	grunt.registerTask('default', [
@@ -147,5 +118,5 @@ module.exports = function(grunt) {
 		'version:prerelease',
 		'build',
 		'copy:dist'
-	]); 
+	]);
 };

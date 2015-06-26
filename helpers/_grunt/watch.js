@@ -1,13 +1,4 @@
 module.exports = {
-	configFiles: {
-		options: {
-			reload: true
-		},
-		files: [
-			'<%= paths.helper %>/_grunt/*.js',
-			'Gruntfile.js'
-		]
-	},
 	livereload: {
 		options: {
 			livereload: '<%= connect.options.livereload %>'
@@ -19,13 +10,19 @@ module.exports = {
 			'<%= paths.dev %>/img/**/*.{jpg,png}'
 		]
 	},
-    js: {
-        files: '<%= paths.src %>/js/{,*/}*.js',
-        tasks: 'sync:js'
-    },
+	js: {
+		files: [
+			'<%= paths.src %>/js/**/*.js',
+			'<%= paths.src %>/js/**/*.html'
+		],
+		tasks: 'js',
+		options: {
+			spawn: false
+		}
+	},
     ajax: {
         files: '<%= paths.src %>/ajax/**/*.{json,html}',
-        tasks: 'sync:assets'
+        tasks: 'sync:ajax'
     },
     assets: {
         files: [
@@ -42,13 +39,13 @@ module.exports = {
 			'<%= paths.src %>/scss/**/*.scss',
 			'!<%= paths.src %>/scss/_all.scss'
 		],
-		tasks: 'fileindex'
+		tasks: 'fileindex:libsassGlobbing'
 	},
 	fileindex: {
 		files: [
 			'<%= paths.helper %>/_grunt/fileindex.js'
 		],
-		tasks: 'fileindex'
+		tasks: 'fileindex:libsassGlobbing'
 	},
 	scss: {
 		files: '<%= paths.src %>/scss/**/*',
@@ -57,8 +54,12 @@ module.exports = {
 			spawn: false
 		}
 	},
+	universal: {
+		files: '<%= paths.src %>/scss/universal.scss',
+		tasks: 'sass:universal'
+	},
 	templates: {
-		files: ['<%= paths.src %>/{data,templates/layouts,templates/partials}/**/{,*/}*.{md,hbs,yml,json}'],
+		files: ['<%= paths.src %>/{templates/data,templates/layouts,templates/partials}/**/{,*/}*.{md,hbs,json}'],
 	    tasks: ['newer:assemble'],
 	    options: {
 			spawn: false

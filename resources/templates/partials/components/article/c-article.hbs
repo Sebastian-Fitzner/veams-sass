@@ -1,34 +1,34 @@
 ---
-component: Article
+component: article
 ---
 
-<article class="c-article{{#if article-modifier-class}}--{{article-modifier-class}}{{/if}} {{article-classes}}" data-css="c-article">
+<article class="c-article{{#if articleModifierClass}}--{{articleModifierClass}}{{/if}} {{articleClasses}}" data-css="c-article">
 
-	{{#if article-header}}
-		{{partial "c-article__header"}}
+	{{#if articleHeader}}
+		{{> c-article__header articleHeader}}
 	{{/if}}
 
-	{{#if article-figure }}
-		{{partial "c-figure" }}
+	{{#if articleFigure }}
+		{{> c-figure articleFigure}}
 	{{/if}}
 
-	<div class="article__content {{article-content-classes}}">
-		{{#if article-summary}}
-			{{{truncate article-content article-summary "..." }}}
+	<div class="article__content {{articleContentClasses}}">
+		{{#if articleSummary}}
+			{{{truncate articleContent articleSummary "..." }}}
 		{{else}}
 		{{! Use md files (md article-md) or json content (article-content) or both}}
 
-			{{{ article-content }}}
+			{{{ articleContent }}}
 
-			{{#if article-md}}
-				{{md article-md}}
+			{{#if articleMd}}
+				{{md articleMd}}
 			{{/if}}
 
 		{{/if}}
 	</div>
 
-	{{#if article-morelink}}
-		{{partial "c-article__footer" }}
+	{{#if articleFooter}}
+		{{> c-article__footer articleFooter}}
 	{{/if}}
 
 </article>

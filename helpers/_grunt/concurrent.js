@@ -9,7 +9,8 @@ module.exports = {
     },
     build: {
         tasks: [
-            'assemble'
+			'jshint',
+            'htmlhint'
         ],
         options: {
             logConcurrentOutput: true,

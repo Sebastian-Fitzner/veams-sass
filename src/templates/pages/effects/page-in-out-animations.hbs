@@ -1,0 +1,16 @@
+---
+title: In-Out-Animations
+menuLink: In-Out-Animations
+sortOrder: 01
+lead: Pre-defined animation and keyframe sets for carousels, sliders and more.
+type: Effects
+typeOrder: 2
+---
+
+{{#extend "tpl-default"}}
+	{{#content "body"}}
+		{{#page__in-out-animations.data}}
+			{{partial "c-article" }}
+		{{/page__in-out-animations.data}}
+	{{/content}}
+{{/extend}}

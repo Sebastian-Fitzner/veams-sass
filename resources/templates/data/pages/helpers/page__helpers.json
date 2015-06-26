@@ -1,0 +1,11 @@
+{
+	"data": [
+		{
+			"articleClass": false,
+			"articleHeader": {
+				"articleH1": "Mixins Library"
+			},
+			"articleMd": "resources/templates/data/pages/helpers/page__helpers.md"
+		}
+	]
+}

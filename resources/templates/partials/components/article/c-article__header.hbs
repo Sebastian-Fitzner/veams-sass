@@ -1,19 +1,19 @@
----
-component: Article Header
----
+<header class="article__header{{#if articleHeaderClasses}} {{articleHeaderClasses}}{{/if}}">
 
-<header class="article__header {{article-header-classes}}">
-
-	{{#if article-date }}
-		<time datetime="{{article-datetime}}">{{article-date}}</time>
+	{{#if articleDate }}
+		<time class="article__header-time" datetime="{{articleDatetime}}">{{articleDate}}</time>
 	{{/if}}
 
-	{{#if article-h1 }}
-		<h1>{{ article-h1 }}</h1>
+	{{#if articleH1 }}
+		<h1 class="article__header-headline">{{ articleH1 }}</h1>
 	{{/if}}
 
-	{{#if article-h2 }}
-		<h2>{{ article-h2 }}</h2>
+	{{#if articleH2 }}
+		<h2 class="article__header-subline">{{ articleH2 }}</h2>
+	{{/if}}
+
+	{{#if articleIntro}}
+		<p class="article__header-intro">{{articleIntro}}</p>
 	{{/if}}
 
 </header>

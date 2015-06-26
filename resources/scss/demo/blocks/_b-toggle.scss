@@ -1,21 +1,26 @@
 .b-toggle {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+
 	.toggle__link {
-		position: absolute;
-		z-index: 9;
-		top: 50%;
-		right: 60px;
+		@extend %hide-text;
+		
+		position: relative;
 
-		margin-top: -18px;
-
-		@include hide-text;
 		&:after {
-			width: 31px;
-			height: 36px;
-
 			@extend %pseudo;
 			@include grunticon(menu);
 			@include transform(rotate(0deg) translateY(0));
 			@include transition(300ms ease all);
+			// @include centering(v);
+
+			top: 50%;
+			margin-top: -21px;
+			width: 31px;
+			height: 36px;
+			right: 0;
 		}
 		&.is-open {
 			&:after {

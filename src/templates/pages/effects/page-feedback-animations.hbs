@@ -1,0 +1,16 @@
+---
+title: Feedback-Animations
+menuLink: Feedback-Animations
+sortOrder: 02
+lead: Pre-defined animation and keyframe sets for subtle click effects based on a Codrops article.
+type: Effects
+typeOrder: 2
+---
+
+{{#extend "tpl-default"}}
+	{{#content "body"}}
+		{{#page__feedback-animations.data}}
+			{{partial "c-article" }}
+		{{/page__feedback-animations.data}}
+	{{/content}}
+{{/extend}}

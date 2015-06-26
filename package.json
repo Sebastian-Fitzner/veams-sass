@@ -1,56 +1,66 @@
 {
-  "name": "pg-scss",
-  "description": "Prototype",
-  "version": "0.2.0",
-  "author": {
-    "name": "Sebastian Fitzner",
-    "email": "",
-    "url": "http://github.com/sebastian-fitzner/"
-  },
-  "engines": {
-    "node": ">=0.8"
-  },
-  "scripts": {
-    "test": "grunt test"
-  },
-  "devDependencies": {
-    "grunt": "~0.4.5",
-    "assemble": "~0.4.42",
-    "lodash": "*",
-    "gray-matter": "*",
-    "handlebars-helper-autolink": "^0.1.1",
-    "grunt-sass": "^0.16.0",
-    "grunt-fileindex": "^0.1.0",
-    "grunt-contrib-copy": "~0.7.0",
-    "grunt-newer": "~0.8.0",
-    "grunt-browser-sync": "~1.5.3",
-    "grunt-combine-media-queries": "~1.0.19",
-    "grunt-data-separator": "~0.1.3",
-    "grunt-dr-svg-sprites": "Sebastian-Fitzner/grunt-dr-svg-sprites",
-    "grunt-text-replace": "~0.3.11",
-    "grunt-grunticon": "~1.0.0-beta.0",
-    "grunt-version": "^0.3.0",
-    "jit-grunt": "^0.9.0",
-    "load-grunt-configs": "~0.4.1",
-    "grunt-sync": "~0.2.0",
-    "grunt-htmlhint": "~0.4.0",
-    "grunt-contrib-htmlmin": "~0.3.0",
-    "grunt-concurrent": "~0.4.2",
-    "grunt-jsbeautifier": "~0.2.6",
-    "grunt-contrib-cssmin": "~0.10.0",
-    "grunt-contrib-clean": "~0.6.0",
-    "grunt-contrib-connect": "~0.8.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-jshint": "~0.8.0",
-    "time-grunt": "*"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/sebastian-fitzner/pg-scss/blob/master/LICENSE-MIT"
-    }
-  ],
-  "keywords": [
-    "handlebars-helper-autolink"
-  ]
+	"name": "pg-scss",
+	"description": "Prototype",
+	"version": "0.2.1",
+	"author": {
+		"name": "Sebastian Fitzner",
+		"email": "",
+		"url": "http://github.com/sebastian-fitzner/"
+	},
+	"engines": {
+		"node": ">=0.10.0"
+	},
+	"scripts": {
+		"test": "grunt test"
+	},
+	"dependencies": { 
+		"jquery": "^2.1.4",
+		"backbone": "^1.2.0",
+		"underscore": "^1.8.3",
+		"document-register-element": "^0.3.0",
+		"respimage": "^1.4.0",
+		"handlebars": "^3.0.3",
+		"touchswipe": "^1.6.0"
+	},
+	"devDependencies": {
+		"grunt-assemble": "~0.3.1",
+		"lodash" : "*",
+		"path" : "*",
+		"gray-matter": "*",
+		"handlebars-helper-autolink": "^0.1.1",
+		"grunt": "~0.4.5",
+		"grunt-sass": "~1.0.0",
+		"grunt-fileindex": "^0.1.0",
+		"grunt-contrib-copy": "~0.7.0",
+		"grunt-newer": "~0.8.0", 
+		"grunt-autoprefixer": "~0.6.5",
+		"grunt-browser-sync": "~1.5.3",
+		"grunt-browserify": "^3.8.0",
+		"grunt-combine-mq": "^0.6.0",
+		"grunt-contrib-uglify": "~0.5.1",
+		"grunt-dr-svg-sprites": "^0.9.15",
+		"grunt-text-replace": "~0.3.11",
+        "grunt-version": "^0.3.0",
+		"jit-grunt": "^0.9.0",
+		"load-grunt-configs": "~0.4.1",
+		"grunt-sync": "~0.2.0",
+		"grunt-htmlhint": "~0.4.0",
+		"grunt-contrib-htmlmin": "~0.3.0",
+		"grunt-concurrent": "~0.4.2",
+		"grunt-jsbeautifier": "~0.2.6",
+		"grunt-contrib-cssmin": "~0.11.0",
+		"grunt-contrib-clean": "~0.6.0",
+		"grunt-contrib-connect": "~0.8.0",
+		"grunt-contrib-watch": "~0.6.1",
+		"grunt-contrib-jshint": "~0.8.0",
+		"time-grunt": "*"
+	},
+	"licenses": [
+	{
+		"type": "MIT",
+		"url": "https://github.com/sebastian-fitzner/pg-scss/blob/master/LICENSE-MIT"
+	}] ,
+	"keywords": [
+		"handlebars-helper-autolink"
+	]
 }
