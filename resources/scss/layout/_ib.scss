@@ -1,19 +1,31 @@
 /* ===================================================
-GLOBAL SETTINGS
+Inline Block Layouts
 =================================================== */
 
 /* ---------------------------------------------------
-Prefix
+Mixin
 --------------------------------------------------- */
-$pg-webkit: true;
-$pg-moz: true;
-$pg-ms: true;
-$pg-o: true;
+@mixin ib-parent() {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	word-spacing: -1em;
+}
+
+@mixin ib-child() {
+	display: inline-block;
+	float: none;
+	vertical-align: top;
+	word-spacing: 0;
+}
 
 /* ---------------------------------------------------
-Animations
+Extend
 --------------------------------------------------- */
+%ib-parent {
+	@include ib-parent();
+}
 
-$transition-duration: 600ms;
-$transition-ease-method: ease;
-$transition-property: all;
+%ib-child {
+	@include ib-child();
+}

@@ -3,25 +3,25 @@ KEYFRAMES MIXIN
 =================================================== */
 
 @mixin keyframes($name) {
-	@if $webkit == true {
+	@if $pg-webkit == true {
 		@-webkit-keyframes #{$name} {
 			@content;
 		}
 	}
 
-	@if $moz == true {
+	@if $pg-moz == true {
 		@-moz-keyframes #{$name} {
 			@content;
 		}
 	}
 
-	@if $ms == true {
+	@if $pg-ms == true {
 		@-ms-keyframes #{$name} {
 			@content;
 		}
 	}
 
-	@if $o == true {
+	@if $pg-o == true {
 		@-o-keyframes #{$name} {
 			@content;
 		}

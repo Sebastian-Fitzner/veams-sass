@@ -9,9 +9,9 @@
 	border-bottom: 1px solid #fff;
 	background: rgba($color-darkBlue, 1);
 
-	@include breakpoint(1280px) {
+	@include bp(1280px) {
 	}
-	@include breakpoint(1680px) {
+	@include bp(1680px) {
 	}
 	@include media($tablet) {
 	}

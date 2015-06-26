@@ -90,7 +90,6 @@ module.exports = function(grunt) {
 	
 	grunt.registerTask('build', [
 		'clean:dev',
-		'jsbeautifier',
 		'browserify:vendor',
 		'browserify:dist',
 		'uglify',

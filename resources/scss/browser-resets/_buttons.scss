@@ -1,0 +1,11 @@
+@mixin reset-btn() {
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font-style: inherit;
+}
+
+%reset-btn {
+	@include reset-btn();
+}
