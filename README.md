@@ -1,4 +1,4 @@
-## Veams-SCSS Starter Kit
+## Veams-SCSS Utility Library
 
 Veams-SCSS is a simple utility library to extend Veams.
 
@@ -27,7 +27,7 @@ Just import the files you need into your project.
 
 ``` scss
 @import "veams-reset"; // or "veams-normalize"
-@import "pg";
+@import "veams";
 @import "veams-animations"; // optional, because it adds keyframes to your css
 ```
 
@@ -55,9 +55,9 @@ Just import the files you need into your project.
 
 This file is imported in `_pg.scss`.
 
-#### `_pg.scss`
+#### `_veams.scss`
 
-`_pg.scss` contains all major helpers and mixins.
+`_veams.scss` contains all major helpers and mixins.
 
 #### `_veams-animations`
 
