@@ -23,6 +23,13 @@ Simple Circle
 }
 
 /*
+Extend
+----------------------- */
+%fb-ani-circleBig {
+	@include fb-ani-circleBig();
+}
+
+/*
 Simple Circle Animation
 ----------------------------- */
 @include keyframes(fb-ani-circleBig) {

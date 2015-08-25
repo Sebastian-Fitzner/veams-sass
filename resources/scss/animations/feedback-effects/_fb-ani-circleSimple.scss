@@ -21,6 +21,12 @@ Simple Circle
 		}
 	}
 }
+/*
+Extend
+----------------------- */
+%fb-ani-circleSimple {
+	@include fb-ani-circleSimple();
+}
 
 /*
 Simple Circle Animation

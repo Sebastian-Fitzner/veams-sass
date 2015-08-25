@@ -7,9 +7,9 @@ FLEXBOX MIXIN
 // CSS3 Flexible Box Model and property defaults
 
 // Custom shorthand notation for flexbox
-@mixin box($pg-orient: inline-axis, $pack: start, $align: stretch) {
+@mixin box($veams-orient: inline-axis, $pack: start, $align: stretch) {
 	@include display-box;
-	@include box-orient($pg-orient);
+	@include box-orient($veams-orient);
 	@include box-pack($pack);
 	@include box-align($align);
 }
@@ -21,9 +21,9 @@ FLEXBOX MIXIN
 	display: box;
 }
 
-@mixin box-orient($pg-orient: inline-axis) {
+@mixin box-orient($veams-orient: inline-axis) {
 	// horizontal|vertical|inline-axis|block-axis|inherit
-	@include prefix(box-orient, $pg-orient);
+	@include prefix(box-orient, $veams-orient);
 }
 
 @mixin box-pack($pack: start) {

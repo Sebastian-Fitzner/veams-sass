@@ -23,6 +23,13 @@ Simple Border
 }
 
 /*
+Extend
+----------------------- */
+%fb-ani-borderSimple {
+	@include fb-ani-borderSimple();
+}
+
+/*
 Simple Border Animation
 ----------------------------- */
 @include keyframes(fb-ani-borderSimple) {

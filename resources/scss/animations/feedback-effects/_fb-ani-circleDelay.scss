@@ -22,6 +22,16 @@ Circle with Delay
 	}
 }
 
+/*
+Extend
+----------------------- */
+%fb-ani-circleDelay {
+	@include fb-ani-circleDelay();
+}
+
+/*
+Keyframes
+----------------------- */
 @include keyframes(fb-ani-circleDelay){
 	0% {
 		@include prefix(transform, scale3d(0.5, 0.5, 1));

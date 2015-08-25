@@ -4,19 +4,19 @@ PREFIX MIXIN
 
 // prefix declarations
 @mixin prefix($property, $value) {
-	@if $pg-webkit == true {
+	@if $veams-webkit == true {
 		-webkit-#{$property}: #{$value};
 	}
 
-	@if $pg-moz == true {
+	@if $veams-moz == true {
 		-moz-#{$property}: #{$value};
 	}
 
-	@if $pg-ms == true {
+	@if $veams-ms == true {
 		-ms-#{$property}: #{$value};
 	}
 
-	@if $pg-o == true {
+	@if $veams-o == true {
 		-o-#{$property}: #{$value};
 	}
 

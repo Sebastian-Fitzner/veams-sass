@@ -6,3 +6,10 @@ FLOAT MIXIN
 	float: left;
 	width: 100%;
 }
+
+/*
+Extend
+----------------------- */
+%float {
+	@include float;
+}

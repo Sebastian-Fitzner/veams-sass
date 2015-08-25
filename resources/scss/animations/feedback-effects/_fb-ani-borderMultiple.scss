@@ -30,6 +30,17 @@ Multiple Border
 }
 
 /*
+Extend
+----------------------- */
+%fb-ani-borderMultiple {
+	@include fb-ani-borderMultiple();
+
+	&::before {
+		@include fb-ani-setupPseudo();
+	}
+}
+
+/*
 Multiple Border Animation
 ----------------------------- */
 @include keyframes(fb-ani-borderMultiple1) {

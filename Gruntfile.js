@@ -38,84 +38,17 @@ module.exports = function(grunt) {
 	/*
 	 *	SIMPLE TASKS
 	 */
-	
-	// SASS Task
-	grunt.registerTask('watchCSS', [
-		'fileindex', // Sass Globbing with Grunt (see: http://www.prototype-generator.com/getting-started/features.html)
-		'sass:dist'
-	]); 
-	
-	// Sprites Task
-	grunt.registerTask('icons', [
-		'dr-svg-sprites',
-		'replace:spriteUrl'
-	]); 
-	
-	// JS Task
-	grunt.registerTask('js', [
-		'browserify:vendor',
-		'browserify:dev'
-	]); 
-	
-	
-	// Build HTML Task
-	grunt.registerTask('build-html', [
-		'assemble'
-	]);
-	
-	// HTML Hint Task (Check your HTML)
-	grunt.registerTask('check-html', [
-		'htmlhint'
-	]);
-	// JS Hint Task (Check you JS)
-	grunt.registerTask('check-js', [
-		'jshint'
-	]);
-	// Beautifier Task (Beautify your JS files)
-	grunt.registerTask('beauty-files', [
-		'jsbeautifier'
-	]);
 
-	/*
-	 *	ADVANCED TASKS	
-	 */
-	grunt.registerTask('server', [
-		'newer:assemble',
-		'concurrent:syncing',
-		'watchCSS',
-		'connect:livereload',
-		// 'browserSync',
-		'watch'
-	]);
-	
 	grunt.registerTask('build', [
-		'clean:dev',
-		'browserify:vendor',
-		'browserify:dist',
-		'uglify',
-		'concurrent:syncing',  
-		'watchCSS',
-		'sass:universal',
-		'combine_mq',
-		'autoprefixer',
-		'cssmin',
-        'assemble',
-		'concurrent:build'
+		'fileindex'
 	]);
 
 	grunt.registerTask('default', [
-		'server'
+		'build'
 	]);
-	
-	// alias serve by grunt convention
-	grunt.registerTask('serve', [
-		'server'
-	]);
-	
+
 	grunt.registerTask('dist', [
-		'clean',
-		'version:prerelease',
-		'build',
-		'copy:dist'
+		'fileindex',
+		'version:patch'
 	]);
 };

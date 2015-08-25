@@ -23,6 +23,13 @@ Circle Revert
 }
 
 /*
+Extend
+----------------------- */
+%fb-ani-circleRevert {
+	@include fb-ani-circleRevert();
+}
+
+/*
 Circle Revert Animation
 ----------------------------- */
 @include keyframes(fb-ani-circleRevert) {

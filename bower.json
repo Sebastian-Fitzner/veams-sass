@@ -1,15 +1,7 @@
 {
-	"name": "pg-scss",
-	"version": "0.2.8",
+	"name": "veams-scss",
+	"version": "1.0.0",
 	"ignore": [
-		"_dist",
-		"_output",
-		"helpers",
-		"resources/assets",
-		"resources/data",
-		"resources/js",
-		"resources/templates",
-		"resources/bower-components",
 		".bowerrc",
 		".gitignore",
 		"bower.json",
@@ -17,12 +9,15 @@
 		"package.json",
 		"README.md"
 	],
-	"devDependencies": {
-		"bourbon": "~3.1.8",
-		"neat": "~1.5.0",
-		"pg-components": "~0.2.0",
-		"pg-js": "~0.1.0",
-		"pg-scss": "~0.2.0"
-	},
-	"dependencies": {}
+	"dependencies": {},
+	"authors": [
+		{
+			"name": "Sebastian Fitzner",
+			"email": "sebastian@jci-werbeagentur.com"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/Sebastian-Fitzner/veams-scss.git"
+	}
 }

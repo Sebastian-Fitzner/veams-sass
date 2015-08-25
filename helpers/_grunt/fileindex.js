@@ -21,43 +21,43 @@ module.exports = {
 		}
 	},
 
-	pgReset: {
+	veamsReset: {
 		files: [
 			{
 				// define your destination file
-				dest: '<%= paths.src %>/scss/_pg-reset.scss',
+				dest: '<%= paths.src %>/scss/_veams-reset.scss',
 				// define your current working directory in which the sass files are located
 				cwd: '<%= paths.src %>/scss/',
 				// here you can build your _all.scss like you would do in _all.scss with sass-globbing
 				src: [
-					'global/_reset.scss',
+					'browser-resets/_reset.scss',
 					'global/_font-base.scss',
 					'global/_settings.scss'
 				]
 			}
 		]
 	},
-	pgNormalize: {
+	veamsNormalize: {
 		files: [
 			{
 				// define your destination file
-				dest: '<%= paths.src %>/scss/_pg-normalize.scss',
+				dest: '<%= paths.src %>/scss/_veams-normalize.scss',
 				// define your current working directory in which the sass files are located
 				cwd: '<%= paths.src %>/scss/',
 				// here you can build your _all.scss like you would do in _all.scss with sass-globbing
 				src: [
-					'global/_normalize.scss',
+					'browser-resets/_normalize.scss',
 					'global/_font-base.scss',
 					'global/_settings.scss'
 				]
 			}
 		]
 	},
-	pgHelper: {
+	veamsHelper: {
 		files: [
 			{
 				// define your destination file
-				dest: '<%= paths.src %>/scss/_pg-helpers.scss',
+				dest: '<%= paths.src %>/scss/_veams-helpers.scss',
 				// define your current working directory in which the sass files are located
 				cwd: '<%= paths.src %>/scss/',
 				// here you can build your _all.scss like you would do in _all.scss with sass-globbing
@@ -68,11 +68,11 @@ module.exports = {
 			}
 		]
 	},
-	pgAnimation: {
+	veamsAnimation: {
 		files: [
 			{
 				// define your destination file
-				dest: '<%= paths.src %>/scss/_pg-animations.scss',
+				dest: '<%= paths.src %>/scss/_veams-animations.scss',
 				// define your current working directory in which the sass files are located
 				cwd: '<%= paths.src %>/scss/',
 				// here you can build your _all.scss like you would do in _all.scss with sass-globbing
@@ -83,49 +83,19 @@ module.exports = {
 			}
 		]
 	},
-	pg: {
+	veams: {
 		files: [
 			{
 				// define your destination file
-				dest: '<%= paths.src %>/scss/_pg.scss',
+				dest: '<%= paths.src %>/scss/_veams.scss',
 				// define your current working directory in which the sass files are located
 				cwd: '<%= paths.src %>/scss/',
 				// here you can build your _all.scss like you would do in _all.scss with sass-globbing
 				src: [
-					'_pg-helpers.scss',
-					'browser-resets/**/*.scss',
+					'_veams-helpers.scss',
+					'browser-resets/_buttons.scss',
 					'effects/**/*.scss',
-					'css3/**/*.scss',
-					'general-extends/**/*.scss'
-				]
-			}
-		]
-	},
-	demo: {
-		files: [
-			{
-				// define your destination file
-				dest: '<%= paths.src %>/scss/demo.scss',
-				// define your current working directory in which the sass files are located
-				cwd: '<%= paths.src %>/scss/',
-				// here you can build your _all.scss like you would do in _all.scss with sass-globbing
-				src: [
-					// 'demo/global/_vars.scss',
-					'_pg-reset.scss',
-					'../bower-components/bourbon/app/assets/stylesheets/_bourbon.scss',
-					'../bower-components/neat/app/assets/stylesheets/_neat.scss',
-					'_pg.scss',
-					'_pg-animations.scss',
-					'demo/global/_vars.scss',
-					'demo/global/_base.scss',
-					'demo/utils/_mixins.scss',
-					'demo/icons/**/*.scss',
-					'demo/effects/**/*.scss',
-					'demo/docs/**/*.scss',
-					'demo/regions/**/*.scss',
-					'demo/modules/**/*.scss',
-					'demo/components/**/*.scss',
-					'demo/blocks/**/*.scss'
+					'css3/**/*.scss'
 				]
 			}
 		]

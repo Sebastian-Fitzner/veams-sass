@@ -19,7 +19,7 @@ config.options = {
 		// dev/working folder
 		dev: '_output',
 		// dist folder with minified and optimized files
-		dist: '_dist'
+		dist: 'dist'
 	},
 
 	// define your ports for livereload

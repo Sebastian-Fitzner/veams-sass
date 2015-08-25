@@ -23,6 +23,13 @@ Simple Circle
 }
 
 /*
+Extend
+----------------------- */
+%fb-ani-circleShrink {
+	@include fb-ani-circleShrink();
+}
+
+/*
 Simple Circle Animation
 ----------------------------- */
 @include keyframes(fb-ani-circleShrink) {

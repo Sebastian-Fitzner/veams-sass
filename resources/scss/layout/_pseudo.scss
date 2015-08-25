@@ -1,5 +1,15 @@
+/* ===================================================
+Pseudo Element
+=================================================== */
 @mixin pseudo() {
 	content: '';
 	display: block;
 	position: absolute;
+}
+
+/*
+Extend
+----------------------- */
+%pseudo {
+	@include pseudo();
 }

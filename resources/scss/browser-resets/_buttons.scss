@@ -1,3 +1,7 @@
+/* ===================================================
+Reset Button
+=================================================== */
+
 @mixin reset-btn() {
 	padding: 0;
 	background-color: transparent;
@@ -6,6 +10,9 @@
 	font-style: inherit;
 }
 
+/*
+Extend
+----------------------- */
 %reset-btn {
 	@include reset-btn();
 }
