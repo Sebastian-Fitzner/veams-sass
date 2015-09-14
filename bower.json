@@ -18,6 +18,6 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/Sebastian-Fitzner/veams-scss.git"
+		"url": "git://github.com/Sebastian-Fitzner/veams-sass.git"
 	}
 }
