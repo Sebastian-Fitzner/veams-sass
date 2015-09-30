@@ -1,56 +1,67 @@
-/* ===================================================
-BREAKPOINT MIXIN
-
-General Mixin to add media query support
-
-Usage:
-1. Define your project settings in global/_vars.scss:
-	- change/add the breakpoints you need for your project
-	- change the variable $mobile-first so that it fits your needs (true or false)
-
-2. Add a specific breakpoint with:
-	- @include breakpoint($my-breakpoint-variable){};
-
-3. When you need "min-width" and "max-width" you just have to provide a second parameter:
-	- @include breakpoint($my-breakpoint-variable-1, $my-breakpoint-variable-2){};
-
-
-Example: $mobile-first: true;
-	@include breakpoint(400px){
-		color: red;
-	};
-
-	Output:
-		@media only screen and (min-width: 400px) {
-			 color: red;
-		}
-
-Example: $mobile-first: false;
-	@include breakpoint(400px){
-		color: red;
-	};
-
-	Output:
-		@media only screen and (max-width: 400px) {
-			 color: red;
-		}
-=================================================== */
-
+/// Breakpoint Variable
+/// can be overriden in your project.
+///
+/// @group Helpers
+/// @type Bool
 $min-width: false;
 
-@mixin bp($breakpoint-1, $breakpoint-2: null, $min-width: false) {
-	@if $breakpoint-2 != null {
-		@media only screen and (min-width: $breakpoint-1) and (max-width: $breakpoint-2) {
+
+/// Breakpoint Mixin
+/// to add media queries with `min-width`, `max-width` or a defined range.
+///
+/// @group Helpers
+/// @author Sebastian Fitzner
+///
+/// @param {string} $bp-1 - Breakpoint
+/// @param {string} $bp-2 [null] - Second breakpoint is optional
+/// @param {bool} $min-width [false] - Define if you want to use `min-width` or `max-width`
+///
+///
+/// @example scss - `min-width`
+///   $mobile-first: true;
+///   @include bp(400px){
+///     color: red;
+///   };
+///
+///   Output:
+///     @media only screen and (min-width: 400px) {
+///       color: red;
+///     }
+///
+/// @example scss - `max-width`
+///   $mobile-first: false;
+///   @include bp(400px){
+///     color: red;
+///   };
+///
+///   Output:
+///     @media only screen and (max-width: 400px) {
+///       color: red;
+///     }
+///
+/// @example scss - range
+///   @include bp(400px, 800px){
+///     color: red;
+///   };
+///
+///   Output:
+///     @media only screen and (min-width: 400px)and (max-width: 800px) {
+///       color: red;
+///     }
+
+@mixin bp($bp-1, $bp-2: null, $min-width: false) {
+	@if $bp-2 != null {
+		@media only screen and (min-width: $bp-1) and (max-width: $bp-2) {
 			@content;
 		}
 	} @else {
 		@if $min-width == true {
-			@media only screen and (min-width: $breakpoint-1) {
+			@media only screen and (min-width: $bp-1) {
 				@content;
 			}
 		} @else {
-			$breakpoint-2: $breakpoint-1;
-			@media only screen and (max-width: $breakpoint-2) {
+			$bp-2: $bp-1;
+			@media only screen and (max-width: $bp-2) {
 				@content;
 			}
 		}
