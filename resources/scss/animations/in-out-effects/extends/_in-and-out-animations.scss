@@ -15,7 +15,6 @@ Move From To
 
 %slide-moveFromLeft {
 	@include slide-moveFromLeft();
-
 }
 
 %slide-moveToRight {
@@ -25,22 +24,18 @@ Move From To
 
 %slide-moveFromRight {
 	@include slide-moveFromRight();
-
 }
 
 %slide-moveToTop {
 	@include slide-moveToTop();
-
 }
 
 %slide-moveFromTop {
 	@include slide-moveFromTop();
-
 }
 
 %slide-moveToBottom {
 	@include slide-moveToBottom();
-
 }
 
 %slide-moveFromBottom {

@@ -1,23 +1,10 @@
-/* ===================================================
-PERCENT CALCULATION MIXIN
-
-	- converts pixel into percentage based on a context width (or var)
-
-	Sample input:
-	.element {
-	     @include cp('padding',10px 0 2px 5px, 980px);
-	}
-
-	Sample output:
-	.element {
-	     padding: 1.02041% 0 0.204082% 0.510204%; // 10px 0 2px 5px
-}
-=================================================== */
-
-/* ---------------------------------------------------
-Clear Units:
-- Turn numbers with units into unitless numbers (https://github.com/nex3/sass/issues/533)
---------------------------------------------------- */
+/// `Clear Units`
+/// turns numbers with units into unitless numbers. (https://github.com/nex3/sass/issues/533)
+///
+/// @group Helpers: Calculation
+///
+/// @param {Number} $value -  a custom value
+///
 @function clear-units($value) {
 	@if type-of($value) == "number" {
 		@if unitless($value) {
@@ -34,7 +21,28 @@ Clear Units:
 		@return $value;
 	}
 }
-
+/// `Calculate Percents Mixin`
+/// converts pixel into percentage based on a context width (or var).
+///
+/// @group Helpers: Calculation
+///
+/// @param {string} $property - a property which can be defined
+/// @param {Object} $px_values - pixel values (up to 4 items)
+/// @param {string} $context - context for the pixels which is a width
+///
+///
+/// @example
+/// Sample input:
+///   .element {
+///     @include cp('padding',10px 0 2px 5px, 980px);
+///   }
+///
+/// Sample output:
+///   .element {
+///     padding: 1.02041% 0 0.204082% 0.510204%; // 10px 0 2px 5px
+///    }
+///
+///
 @mixin cp($property, $px_values, $context) {
 	// clear up all units to prevent sass errors
 	// cycle trough box model values

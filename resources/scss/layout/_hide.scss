@@ -5,6 +5,17 @@ Hiding Elements
 /* ---------------------------------------------------
 ir
 --------------------------------------------------- */
+/// `Hiding: IR`
+/// hides element with `text-indent` and pseudo element.
+///
+/// @group Hiding
+///
+///
+/// @example
+///   .element {
+///     @include ir();
+///   }
+///
 @mixin ir() {
 	background-color: transparent;
 	border: 0;
@@ -25,6 +36,17 @@ ir
 /* ---------------------------------------------------
 Hidden
 --------------------------------------------------- */
+/// `Hiding: Hidden`
+/// hides element with `display: none`.
+///
+/// @group Hiding
+///
+///
+/// @example
+///   .element {
+///     @include hidden();
+///   }
+///
 @mixin hidden() {
 	display: none;
 	visibility: hidden;
@@ -37,6 +59,17 @@ Hidden
 /* ---------------------------------------------------
 Visually hidden
 --------------------------------------------------- */
+/// `Hiding: Visually Hidden`
+/// hides element with `clip`.
+///
+/// @group Hiding
+///
+///
+/// @example
+///   .element {
+///     @include visuallyhidden();
+///   }
+///
 @mixin visuallyhidden() {
 	border: 0;
 	clip: rect(0 0 0 0);
@@ -65,6 +98,17 @@ Visually hidden
 /* ---------------------------------------------------
 Visibility hidden
 --------------------------------------------------- */
+/// `Hiding: Invisible`
+/// hides element with `visibility`.
+///
+/// @group Hiding
+///
+///
+/// @example
+///   .element {
+///     @include invisible();
+///   }
+///
 @mixin invisible() {
 	visibility: hidden;
 }
@@ -76,6 +120,17 @@ Visibility hidden
 /* ---------------------------------------------------
 Hide text
 --------------------------------------------------- */
+/// `Hiding: Hidden Text`
+/// hides text with `font-size: 0`.
+///
+/// @group Hiding
+///
+///
+/// @example
+///   .element {
+///     @include hidden-text();
+///   }
+///
 @mixin hidden-text() {
 	color: transparent;
 	font: 0/0 a;

@@ -1,48 +1,158 @@
-
-
 /* ---------------------------------------------------
 Flip
 --------------------------------------------------- */
 
-@mixin slide-flipOutRight($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
-	@include prefix(transform-origin, 50% 50%);
-	@include prefix(animation, flipOutRight $transition-duration ease-in both);
-}
-
-@mixin slide-flipInLeft($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
-	@include prefix(transform-origin, 50% 50%);
-	@include prefix(animation, flipInLeft $transition-duration ease-out both);
-}
-
-@mixin slide-flipOutLeft($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+/// `FLip: Flip Left Out`
+/// animates from center to the left with a flip movement.
+///
+/// @group Animations: Flip
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include flip-left-out(300ms, ease-in);
+///   }
+///
+@mixin flip-left-out($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(transform-origin, 50% 50%);
 	@include prefix(animation, flipOutLeft $transition-duration ease-in both);
 }
 
-@mixin slide-flipInRight($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+/// `FLip: Flip Left In`
+/// animates from left to the center with a flip movement.
+///
+/// @group Animations: Flip
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include flip-left-in(300ms, ease-in);
+///   }
+///
+@mixin flip-left-in($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 50% 50%);
+	@include prefix(animation, flipInLeft $transition-duration ease-out both);
+}
+
+/// `FLip: Flip Right Out`
+/// animates from center to the right with a flip movement.
+///
+/// @group Animations: Flip
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include flip-right-out(300ms, ease-in);
+///   }
+///
+@mixin flip-right-out($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 50% 50%);
+	@include prefix(animation, flipOutRight $transition-duration ease-in both);
+}
+
+/// `FLip: Flip Right In`
+/// animates from right to the center with a flip movement.
+///
+/// @group Animations: Flip
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include flip-right-in(300ms, ease-in);
+///   }
+///
+@mixin flip-right-in($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(transform-origin, 50% 50%);
 	@include prefix(animation, flipInRight $transition-duration ease-out both);
 }
 
-@mixin slide-flipOutTop($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+/// `FLip: Flip Top Out`
+/// animates from center to the top with a flip movement.
+///
+/// @group Animations: Flip
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include flip-top-out(300ms, ease-in);
+///   }
+///
+@mixin flip-top-out($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(transform-origin, 50% 50%);
 	@include prefix(animation, flipOutTop $transition-duration ease-in both);
 }
 
-@mixin slide-flipInBottom($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+/// `FLip: Flip Top In`
+/// animates from top to the center with a flip movement.
+///
+/// @group Animations: Flip
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include flip-top-in(300ms, ease-in);
+///   }
+///
+@mixin flip-top-in($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(transform-origin, 50% 50%);
-	@include prefix(animation, flipInBottom $transition-duration ease-out both);
-
+	@include prefix(animation, flipInTop $transition-duration ease-out both);
 }
 
-@mixin slide-flipOutBottom($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+/// `FLip: Flip Bottom Out`
+/// animates from center to the bottom with a flip movement.
+///
+/// @group Animations: Flip
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include flip-bottom-out(300ms, ease-in);
+///   }
+///
+@mixin flip-bottom-out($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(transform-origin, 50% 50%);
 	@include prefix(animation, flipOutBottom $transition-duration ease-in both);
 }
 
-@mixin slide-flipInTop($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+/// `FLip: Flip Bottom In`
+/// animates from bottom to the center with a flip movement.
+///
+/// @group Animations: Flip
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include flip-bottom-in(300ms, ease-in);
+///   }
+///
+@mixin flip-bottom-in($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(transform-origin, 50% 50%);
-	@include prefix(animation, flipInTop $transition-duration ease-out both);
+	@include prefix(animation, flipInBottom $transition-duration ease-out both);
+
 }
 
 /* ---------------------------------------------------

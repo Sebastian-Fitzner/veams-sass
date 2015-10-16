@@ -1,8 +1,18 @@
-/* ===================================================
-PREFIX MIXIN
-=================================================== */
+/// `Prefix Mixin`
+/// helps in creating prefixed properties.
+///
+/// @author Sebastian Fitzner
+///
+/// @group Helpers: Prefix
+///
+/// @param {String} $property - Property which should be prefixed.
+/// @param {String} $value - Value of property.
+///
+///
+/// @example
+///   @include prefix('transform', translateY(100%));
+///
 
-// prefix declarations
 @mixin prefix($property, $value) {
 	@if $veams-webkit == true {
 		-webkit-#{$property}: #{$value};

@@ -1,6 +1,17 @@
 /* ===================================================
 Pseudo Element
 =================================================== */
+
+/// `Layouts: Pseudo`
+/// adds pseudo styles to pseudo elements.
+///
+/// @group Layouts
+///
+/// @example
+///   .element {
+///     @include pseudo();
+///   }
+///
 @mixin pseudo() {
 	content: '';
 	display: block;

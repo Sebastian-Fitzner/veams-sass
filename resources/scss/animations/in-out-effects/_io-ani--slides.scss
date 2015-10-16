@@ -1,11 +1,40 @@
 /* ---------------------------------------------------
 Slides
 --------------------------------------------------- */
-@mixin slide-rotateSlideOut($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+
+/// `Slide: Out`
+/// animates element by changing translateZ, translateX and adding opacity animation.
+///
+/// @group Animations: Slide
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include slide-rotate-out(300ms, ease-in);
+///   }
+///
+@mixin slide-rotate-out($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(animation, rotateSlideOut $transition-duration $transition-ease-method both);
 }
 
-@mixin slide-rotateSlideIn($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+/// `Slide: In`
+/// animates element by changing translateZ, translateX and adding opacity animation.
+///
+/// @group Animations: Slide
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include slide-rotate-in(300ms, ease-in);
+///   }
+///
+@mixin slide-rotate-in($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(animation, rotateSlideIn $transition-duration $transition-ease-method both);
 }
 

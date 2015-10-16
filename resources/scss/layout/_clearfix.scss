@@ -1,6 +1,18 @@
 /* ===================================================
 Clearfix
 =================================================== */
+
+/// `Layouts: Clearfix`
+/// clearfix elements with zoom and pseudo elements.
+///
+/// @group Layouts
+///
+///
+/// @example
+///   .element {
+///     @include clearfix();
+///   }
+///
 @mixin clearfix() {
 	*zoom: 1;
 

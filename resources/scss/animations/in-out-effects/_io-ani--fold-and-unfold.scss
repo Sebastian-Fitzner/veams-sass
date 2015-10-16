@@ -5,22 +5,79 @@ Fold and Unfold
 /*
 Fold
 ----------------------------- */
-@mixin slide-rotateFoldRight($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
-	@include prefix(transform-origin, 0% 50%);
-	@include prefix(animation, rotateFoldRight $transition-duration $transition-ease-method both);
-}
 
-@mixin slide-rotateFoldLeft($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+/// `Fold: Left`
+/// animates from center to the left with a folding movement.
+///
+/// @group Animations: Fold & Unfold
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include fold-left(300ms, ease-in);
+///   }
+///
+@mixin fold-left($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(transform-origin, 100% 50%);
 	@include prefix(animation, rotateFoldLeft $transition-duration $transition-ease-method both);
 }
 
-@mixin slide-rotateFoldTop($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+/// `Fold: Right`
+/// animates from center to the right with a folding movement.
+///
+/// @group Animations: Fold & Unfold
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include fold-right(300ms, ease-in);
+///   }
+///
+@mixin fold-right($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+	@include prefix(transform-origin, 0% 50%);
+	@include prefix(animation, rotateFoldRight $transition-duration $transition-ease-method both);
+}
+
+/// `Fold: Top`
+/// animates from center to the top with a folding movement.
+///
+/// @group Animations: Fold & Unfold
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include fold-top(300ms, ease-in);
+///   }
+///
+@mixin fold-top($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(transform-origin, 50% 100%);
 	@include prefix(animation, rotateFoldTop $transition-duration $transition-ease-method both);
 }
 
-@mixin slide-rotateFoldBottom($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+/// `Fold: Bottom`
+/// animates from center to the bottom with a folding movement.
+///
+/// @group Animations: Fold & Unfold
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include fold-bottom(300ms, ease-in);
+///   }
+///
+@mixin fold-bottom($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(transform-origin, 50% 0%);
 	@include prefix(animation, rotateFoldBottom $transition-duration $transition-ease-method both);
 }
@@ -28,22 +85,79 @@ Fold
 /*
 Unfold
 ----------------------------- */
-@mixin slide-rotateUnfoldLeft($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+
+/// `Unfold: Left`
+/// animates from left to the center with a unfolding movement.
+///
+/// @group Animations: Fold & Unfold
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include unfold-left(300ms, ease-in);
+///   }
+///
+@mixin unfold-left($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(transform-origin, 100% 50%);
 	@include prefix(animation, rotateUnfoldLeft $transition-duration $transition-ease-method both);
 }
 
-@mixin slide-rotateUnfoldRight($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+/// `Unfold: Right`
+/// animates from right to the center with a unfolding movement.
+///
+/// @group Animations: Fold & Unfold
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include unfold-right(300ms, ease-in);
+///   }
+///
+@mixin unfold-right($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(transform-origin, 0% 50%);
 	@include prefix(animation, rotateUnfoldRight $transition-duration $transition-ease-method both);
 }
 
-@mixin slide-rotateUnfoldTop($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+/// `Unfold: Top`
+/// animates from top to the center with a unfolding movement.
+///
+/// @group Animations: Fold & Unfold
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include unfold-top(300ms, ease-in);
+///   }
+///
+@mixin unfold-top($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(transform-origin, 50% 100%);
 	@include prefix(animation, rotateUnfoldTop $transition-duration $transition-ease-method both);
 }
 
-@mixin slide-rotateUnfoldBottom($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+/// `Unfold: Bottom`
+/// animates from bottom to the center with a unfolding movement.
+///
+/// @group Animations: Fold & Unfold
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include unfold-bottom(300ms, ease-in);
+///   }
+///
+@mixin unfold-bottom($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(transform-origin, 50% 0%);
 	@include prefix(animation, rotateUnfoldBottom $transition-duration $transition-ease-method both);
 }

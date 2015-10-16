@@ -1,7 +1,19 @@
-/* ---------------------------------------------------
-Rotate Fall
---------------------------------------------------- */
-@mixin slide-rotateFall($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+
+/// `Rotation and Falling`
+/// rotates an element and adds a falling animation.
+///
+/// @group Animations: Rotation
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include rotate-fall(300ms, ease-in);
+///   }
+///
+@mixin rotate-fall($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(transform-origin, 0% 0%);
 	@include prefix(animation, rotateFall $transition-duration ease-in both);
 }

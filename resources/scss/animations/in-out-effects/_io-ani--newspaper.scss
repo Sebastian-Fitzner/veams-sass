@@ -1,12 +1,41 @@
 /* ---------------------------------------------------
 Rotate Newspaper
 --------------------------------------------------- */
-@mixin slide-rotateOutNewspaper($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+
+/// `Newspaper: Rotate Out`
+/// animates element with a rotation and fade out effect.
+///
+/// @group Animations: Newspaper
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include newspaper-out(300ms, ease-in);
+///   }
+///
+@mixin newspaper-out($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(transform-origin, 50% 50%);
 	@include prefix(animation, rotateOutNewspaper $transition-duration ease-in both);
 }
 
-@mixin slide-rotateInNewspaper($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
+/// `Newspaper: Rotate In`
+/// animates element with a rotation and fade in effect.
+///
+/// @group Animations: Newspaper
+///
+/// @param {string} $transition-duration [$transition-duration] - duration time
+/// @param {Object} $transition-ease-method [$transition-ease-method] - ease method
+///
+///
+/// @example
+///   .element {
+///     @include newspaper-in(300ms, ease-in);
+///   }
+///
+@mixin newspaper-in($transition-duration: $transition-duration, $transition-ease-method: $transition-ease-method) {
 	@include prefix(transform-origin, 50% 50%);
 	@include prefix(animation, rotateInNewspaper $transition-duration ease-out both);
 }

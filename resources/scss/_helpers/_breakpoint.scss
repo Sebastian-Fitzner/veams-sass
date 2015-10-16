@@ -1,7 +1,7 @@
 /// Breakpoint Variable
-/// can be overriden in your project.
+/// can be overridden in your project.
 ///
-/// @group Helpers
+/// @group Helpers: General
 /// @type Bool
 $min-width: false;
 
@@ -9,7 +9,8 @@ $min-width: false;
 /// Breakpoint Mixin
 /// to add media queries with `min-width`, `max-width` or a defined range.
 ///
-/// @group Helpers
+/// @group Helpers: General
+///
 /// @author Sebastian Fitzner
 ///
 /// @param {string} $bp-1 - Breakpoint
