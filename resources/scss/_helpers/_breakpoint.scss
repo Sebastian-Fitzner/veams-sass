@@ -3,7 +3,7 @@
 ///
 /// @group Helpers: General
 /// @type Bool
-$min-width: false;
+$min-width: false !default;
 
 
 /// Breakpoint Mixin
@@ -50,7 +50,7 @@ $min-width: false;
 ///       color: red;
 ///     }
 
-@mixin bp($bp-1, $bp-2: null, $min-width: false) {
+@mixin bp($bp-1, $bp-2: null, $min-width) {
 	@if $bp-2 != null {
 		@media only screen and (min-width: $bp-1) and (max-width: $bp-2) {
 			@content;
