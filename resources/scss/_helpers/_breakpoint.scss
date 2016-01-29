@@ -50,7 +50,7 @@ $min-width: false !default;
 ///       color: red;
 ///     }
 
-@mixin bp($bp-1, $bp-2: null, $min-width) {
+@mixin bp($bp-1, $bp-2: null, $min-width: $min-width) {
 	@if $bp-2 != null {
 		@media only screen and (min-width: $bp-1) and (max-width: $bp-2) {
 			@content;
