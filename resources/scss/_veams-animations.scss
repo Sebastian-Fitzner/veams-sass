@@ -1,3 +1,4 @@
+@import "animations/feedback-effects/fb-ani-setup";
 @import "animations/feedback-effects/fb-ani-borderMultiple";
 @import "animations/feedback-effects/fb-ani-borderSimple";
 @import "animations/feedback-effects/fb-ani-circleBig";
@@ -5,7 +6,6 @@
 @import "animations/feedback-effects/fb-ani-circleRevert";
 @import "animations/feedback-effects/fb-ani-circleShrink";
 @import "animations/feedback-effects/fb-ani-circleSimple";
-@import "animations/feedback-effects/fb-ani-setup";
 @import "animations/in-out-effects/io-ani--carousel";
 @import "animations/in-out-effects/io-ani--cube";
 @import "animations/in-out-effects/io-ani--fall";
@@ -19,4 +19,3 @@
 @import "animations/in-out-effects/io-ani--scale";
 @import "animations/in-out-effects/io-ani--sides";
 @import "animations/in-out-effects/io-ani--slides";
-// @import "animations/in-out-effects/extends/in-and-out-animations";

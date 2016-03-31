@@ -78,6 +78,7 @@ module.exports = {
 				// here you can build your _all.scss like you would do in _all.scss with sass-globbing
 				src: [
 					'keyframes/**/*.scss',
+					'animations/feedback-effects/_fb-ani-setup.scss',
 					'animations/**/*.scss'
 				]
 			}
